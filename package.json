@@ -1,0 +1,22 @@
+{
+  "name": "gulp-pack",
+  "version": "1.0.0",
+  "description": "Building gulp plugins for the frontend developer",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaurmag/gulp-pack.git"
+  },
+  "keywords": [
+    "gulp, packages, frontend"
+  ],
+  "author": "zaurmag, uzunhair uzunhair@yandex.ru",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zaurmag/gulp-pack/issues"
+  },
+  "homepage": "https://github.com/zaurmag/gulp-pack#readme"
+}
