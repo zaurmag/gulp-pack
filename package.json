@@ -1,13 +1,14 @@
 {
-  "name": "zaurmag-gulp-taskmanager",
-  "version": "1.0.0",
-  "description": "My gulp project v.4",
+  "name": "gulp-pack",
+  "version": "1.0",
+  "description": "My starter project for web development",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
+  "scripts": {},
   "author": "Zaur Magomedov",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zaurmag/gulp-pack.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "latest",
