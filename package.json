@@ -1,14 +1,20 @@
 {
   "name": "gulp-pack",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "My starter project for web development",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {},
-  "author": "Zaur Magomedov",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zaurmag/gulp-pack.git"
+    "url": "git+https://github.com/zaurmag/gulp-pack.git"
   },
+  "keywords": [
+    "gulp",
+    "web-developer",
+    "html",
+    "css"
+  ],
+  "author": "Zaur Magomedov",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "latest",
