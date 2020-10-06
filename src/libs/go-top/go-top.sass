@@ -1,0 +1,27 @@
+.go-top
+    align-items: center
+    background-color: $dark
+    bottom: 30px
+    color: $white
+    cursor: pointer
+    display: flex
+    font-size: 24px
+    position: fixed
+    right: 15px
+    text-decoration: none
+    transition: background-color, opacity .3s ease
+    opacity: .5
+    justify-content: center
+    height: 50px
+    width: 40px
+    z-index: 20
+    @include media-breakpoint-up(lg)
+        right: 30px
+
+        &:hover
+            background-color: $primary
+            transition: background-color, opacity .3s ease
+            opacity: 1
+
+    .icon
+        fill: $white

@@ -1,0 +1,12 @@
+nav.menu
+    .logo.logo--mobile.d-lg-none.mb-30
+        include ../logo/logo
+
+    ul.menu__list
+        each item in menuData
+            - var activeClass = menuHref == item.link ? " is-active" : "";
+            li(class="menu__list-item" + activeClass)
+                if(item.link == '/')
+                    a(href= "/")= item.text
+                else
+                    a(href= "/" + item.link + ".html")= item.text

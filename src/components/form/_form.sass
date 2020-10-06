@@ -1,0 +1,107 @@
+.form
+    $self: &
+
+    &__group
+        position: relative
+
+        &:not(:last-child)
+            margin-bottom: 15px
+
+    // Label
+    &__label
+        color: #9c9c9c
+        position: absolute
+        left: 15px
+        top: 50%
+        pointer-events: none
+        font-size: 14px
+        line-height: 1.2
+        transform: translateY(-50%)
+        transition: all 0.2s ease
+        margin: 0
+        z-index: 5
+
+        &--textarea
+            transform: none
+            top: 15px
+
+    // Input
+    &__control
+        border: 1px solid rgba($black, 0.5)
+        padding: 0 15px
+        font-size: 16px
+        transition: border-color 0.3s ease
+        height: 48px
+        width: 100%
+
+        &::placeholder
+            text-transform: uppercase
+
+        &:focus
+            border-color: rgba($black, 1)
+            transition: border-color 0.3s ease
+
+        &.wpcf7-not-valid
+            border-color: $red
+
+        &--textarea
+            padding: 15px
+            height: 120px
+
+    &__submit
+        align-items: center
+        display: flex
+        padding-top: 0
+        padding-bottom: 0
+        justify-content: center
+        font-size: 18px
+        text-transform: uppercase
+        height: 48px
+
+
+    // Focus state
+    .is-focused
+        #{$self}
+            &__control
+                border-color: $gray-800
+                transition: border-color .2s ease
+
+            &__label
+                font-size: 11px
+                top: 8px
+                bottom: auto
+                transition: all 0.2s ease
+
+                &--textarea
+                    top: 4px
+
+    /**
+     * Contact form 7
+     */
+.wpcf7-form
+    .wpcf7-form-control-wrap
+        display: block
+        margin-bottom: 24px
+
+        + br
+            display: none
+
+    .wpcf7-not-valid-tip
+        display: block
+        font-size: 11px
+        line-height: 1.2
+        margin-top: 5px
+
+    > .wpcf7-response-output
+        display: none !important
+
+
+    .ajax-loader
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 30px
+
+    .form__group
+        br
+            display: none

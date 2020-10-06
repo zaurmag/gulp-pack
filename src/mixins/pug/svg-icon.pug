@@ -1,0 +1,4 @@
+mixin icon(name)
+	- mod = mod || ''
+	svg(class="icon icon-" + name)
+		use(xlink:href="#" + name)

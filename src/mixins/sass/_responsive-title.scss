@@ -1,0 +1,20 @@
+@function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+}
+
+@mixin responsive-tlt($minFz, $maxFz) {
+
+    $raznostFz: strip-units($maxFz - $minFz);
+
+    @media (max-width: 320px) {
+        font-size: $minFz
+    }
+
+    @include media-breakpoint-only(xl) {
+        font-size: $maxFz
+    }
+
+    @include media-breakpoint-between('320', lg) {
+        font-size: calc(#{$minFz} + #{$raznostFz} * (100vw - 320px) / 790)
+    }
+}

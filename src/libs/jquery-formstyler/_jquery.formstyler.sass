@@ -1,0 +1,128 @@
+/**
+ * Select
+ */
+.jq-selectbox
+    $self: &
+    background-color: $white
+    border: 1px solid #d3d3d3
+    border-radius: 3px
+    vertical-align: middle
+    cursor: pointer
+    letter-spacing: .28px
+    height: 38px
+    width: 100%
+
+    &.opened
+        border-color: $orange
+
+        #{$self}__trigger
+            &-arrow
+                transform: translate(-50%,-50%) rotate(-45deg)
+                transition: all .2s ease
+
+    &__select
+        height: 100%
+        z-index: 1
+
+        &-text
+            color: $gray-600
+            font-size: 16px
+            font-weight: 300
+            line-height: 38px
+            padding: 0 0 0 15px
+            margin-right: 30px
+            height: 100%
+
+    &__trigger
+        position: absolute
+        top: 0
+        right: 0
+        height: 100%
+        width: 30px
+
+        &-arrow
+            border-right: 1px solid $black
+            border-top: 1px solid $black
+            @include pos-center
+            transform: translate(-50%,-50%) rotate(135deg)
+            transition: all .2s ease
+            height: 7px
+            width: 7px
+
+    // Dropdown
+    &__dropdown
+        background-color: $white
+        box-shadow: 4px 3px 25px 0 rgba($black, .15)
+        border-radius: 3px
+        top: 45px
+        left: 0
+        width: 100%
+        z-index: 0
+
+        ul
+            color: $gray-600
+            font-size: 16px
+            font-weight: 300
+            padding: 10px 0
+
+            li
+                padding: 0 15px
+                line-height: 40px
+                height: 40px
+                
+                &:hover
+                    background-color: rgba(243, 144, 6, .1)
+
+                &.selected
+                    background-color: $gray-500
+                    color: $black
+
+/**
+ * Checkbox
+ */
+.jq-checkbox
+    $self: &
+    background-color: $white
+    border: 1px solid #d3d3d3
+    border-radius: $border-radius
+    height: 22px
+    width: 22px
+
+    &__div
+        border-top: 2px solid #da8105
+        border-right: 2px solid #da8105
+        display: none
+        position: absolute
+        top: 4px
+        left: 4px
+        transform: rotate(135deg)
+        height: 8px
+        width: 14px
+
+    &.checked
+        #{$self}__div
+            display: block
+            
+
+/**
+ * Radio
+ */
+.jq-radio
+    border: 1px solid #d3d3d3
+    border-radius: 50%
+    position: relative
+    min-width: 16px
+    height: 16px
+    width: 16px
+
+    &.checked
+        .jq-radio__div
+            background-color: $orange
+            border-radius: 50%
+            @include pos-center
+            height: 8px
+            width: 8px
+
+/**
+ * File
+ */

@@ -1,0 +1,9 @@
+@mixin linear-gradient($direction, $fromColor, $toColor)
+    background-color: $toColor /* Fallback Color */
+    background-image: -webkit-gradient(linear, $direction, from($fromColor), to($toColor)) /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient($direction, $fromColor, $toColor) /* Chrome 10+, Saf5.1+, iOS 5+ */
+    background-image:    -moz-linear-gradient($direction, $fromColor, $toColor) /* FF3.6 */
+    background-image:     -ms-linear-gradient($direction, $fromColor, $toColor) /* IE10 */
+    background-image:      -o-linear-gradient($direction, $fromColor, $toColor) /* Opera 11.10+ */
+    background-image:         linear-gradient($direction, $fromColor, $toColor)
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');

@@ -1,0 +1,15 @@
+#callback.zoom-anim-dialog.mfp-hide.white-block
+    .form.callback
+        form#callbackForm.form__form.callback-form(action='#')
+            fieldset.form__fields.form__hide-success
+                legend.form__title Мы вам перезвоним!
+
+                .form-group
+                    input#name.form-control(name='name', type='text', placeholder='Ваше имя*', required)
+
+                .form-group
+                    input#phone.form-control.phone-mask(name='phone', type='text', placeholder='Ваш телефон*', required)
+                input(type='hidden', name='go', value='callback')
+
+                .form-group
+                    button.btn-submit.btn.btn-primary.btn-block(type='submit') Отправить

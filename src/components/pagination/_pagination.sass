@@ -1,0 +1,39 @@
+.pagination
+    &__list
+        align-items: center
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        font-size: 15px
+        list-style: none
+
+        li
+            margin: 0 3px
+
+            a, span
+                border: 1px solid $gray-400
+                border-radius: $border-radius
+                color: #a1b1bc
+                display: block
+                text-decoration: none
+                line-height: 28px
+                padding: 0 10px
+                height: 30px
+
+                &:hover
+                    color: $blue
+                    text-decoration: none
+
+            &.disabled
+                display: none
+
+            &:hover
+                a
+                    border-color: $teal
+                    color: $teal
+
+            &.pagination_active
+                a, span
+                    background-color: $teal
+                    border-color: $teal
+                    color: $white

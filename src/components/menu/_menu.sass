@@ -1,0 +1,74 @@
+.menu
+    /**
+     * All viewports
+     */
+    &__list
+        font-size: 14px
+        font-weight: 700
+
+        li
+            &.is-active
+                a
+                    color: $green
+
+    /**
+     * Mobile
+     */
+    @include media-breakpoint-down(md)
+        background-color: $white
+        position: fixed
+        top: 0
+        left: 0
+        bottom: 0
+        overflow-y: auto
+        padding: 20px
+        transform: translateX(-100%)
+        transition: transform 0.3s ease
+        width: 260px
+        z-index: 102
+
+        &.is-active
+            transform: translateX(0)
+            transition: transform 0.3s ease
+
+        &__list
+            font-size: 18px
+            font-weight: 500
+
+            li
+                a
+                    color: $gray-600
+                    &:hover
+                        text-decoration: none
+
+                &:not(:last-child)
+                    margin-bottom: 20px
+
+
+    /**
+     * Desktop
+     */
+    @include media-breakpoint-up(lg)
+        &__list
+            display: flex
+            justify-content: flex-end
+
+            > li
+                &:not(:last-child)
+                    margin-right: 20px
+                    @include media-breakpoint-up(xl)
+                        margin-right: 40px
+                    @include media-breakpoint-up(xxl)
+                        margin-right: 50px
+
+            li
+                a
+                    color: $gray-600
+                    position: relative
+                    display: block
+                    transition: color .2s ease
+
+                    &:hover
+                        color: $green
+                        text-decoration: none
+                        transition: color .2s ease

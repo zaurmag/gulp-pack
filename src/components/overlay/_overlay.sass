@@ -1,0 +1,19 @@
+.overlay
+    background-color: rgba($black, .5)
+    opacity: 0
+    visibility: hidden
+    position: fixed
+    transition: all .3s ease
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 99
+
+
+body
+    &.animate
+        .overlay
+            visibility: visible
+            opacity: 1
+            transition: all .3s ease

@@ -1,0 +1,34 @@
+extends ./base/base
+
+block variables
+    - var title = 'Главная страница сайта'
+    - var pageClass = 'homepage'
+     - var menuHref = '/'
+
+block top-position
+    section.top-position.mb-5
+        .module
+            .container
+                .module__title Модуль в позиции TOP
+
+block columns
+    main.content__no-cols.col-12
+        article.page.textblock
+            //h1.text-primary.mb-5 !{title}
+
+            p
+                != 'Строка текста с тегом <strong>выделения</strong>.'
+
+    //.pagination
+    //    include ./components/pagination/pagination
+
+
+
+block bottom-position
+    section.bottom-position.mt-5
+        .module
+            .container
+                .module__title Модуль в позиции BOTTOM
+
+
+
