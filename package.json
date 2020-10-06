@@ -42,7 +42,6 @@
     "gulp-sourcemaps": "latest",
     "gulp-svg-sprite": "latest",
     "gulp-tinypng": "latest",
-    "gulp-uglify": "latest",
     "gulp-watch": "latest",
     "gulp-zip": "latest",
     "gulp.spritesmith": "latest",
