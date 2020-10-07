@@ -3,7 +3,6 @@ module.exports = [
 	'./gulp/pug',
 	'./gulp/sass',
 	'./gulp/js',
-	'./gulp/scripts',
 	'./gulp/img',
 	'./gulp/img-sprite',
 	'./gulp/svg-sprite',

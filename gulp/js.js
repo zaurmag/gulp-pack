@@ -2,10 +2,10 @@
 let webpackConfig = require('../webpack.config');
 
 module.exports = function () {
-	return $.gulp.task('js', (done) => {
+	return $.gulp.task('js:build', (done) => {
 		$.gulp.src(webpackConfig.entry)
 			.pipe($.plugins.plumber())
-			.pipe($.plugins.webpackStream(webpackConfig))
+			.pipe($.webpackStream(webpackConfig))
 			.pipe($.gulp.dest(webpackConfig.output.path)
 				.pipe($.browserSync.reload({
 					stream: true,
