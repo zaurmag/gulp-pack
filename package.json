@@ -37,7 +37,7 @@
     "gulp-csso": "latest",
     "gulp-data": "latest",
     "gulp-eslint": "^6.0.0",
-    "gulp-load-plugins": "latest",
+    "gulp-load-plugins": "^2.0.4",
     "gulp-plumber": "latest",
     "gulp-pug": "latest",
     "gulp-pug2": "latest",

@@ -12,9 +12,17 @@ global.$ = {
 	// eslint-disable-next-line global-require
 	vinylFtp: require('vinyl-ftp'),
 	// eslint-disable-next-line global-require
+	webpackStream: require('webpack-stream'),
+	// eslint-disable-next-line global-require
 	plugins: require('gulp-load-plugins')({
 		overridePattern: true,
-		pattern: '*',
+		pattern: ['gulp-*', 'gulp.*', '@*/gulp{-,.}*'],
+		scope: [
+			'dependencies',
+			'devDependencies',
+			'optionalDependencies',
+			'peerDependencies',
+		],
 	}),
 };
 

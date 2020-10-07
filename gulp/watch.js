@@ -1,4 +1,5 @@
 let path = require('./path/path.js');
+
 module.exports = function () {
 	$.gulp.task('watch', () => {
 		// Without critical
