@@ -1,11 +1,17 @@
 global.$ = {
 	path: {
+		// eslint-disable-next-line global-require
 		task: require('./gulp/path/tasks.js'),
 	},
+	// eslint-disable-next-line global-require
 	gulp: require('gulp'),
+	// eslint-disable-next-line global-require
 	del: require('del'),
+	// eslint-disable-next-line global-require
 	browserSync: require('browser-sync').create(),
+	// eslint-disable-next-line global-require
 	vinylFtp: require('vinyl-ftp'),
+	// eslint-disable-next-line global-require
 	plugins: require('gulp-load-plugins')({
 		overridePattern: true,
 		pattern: '*',
@@ -13,6 +19,7 @@ global.$ = {
 };
 
 $.path.task.forEach((taskPath) => {
+	// eslint-disable-next-line global-require
 	require(taskPath)();
 });
 
@@ -22,7 +29,7 @@ $.gulp.task('build', $.gulp.series(
 		'pug:build',
 		// 'style:build',
 		'styleDev:build',
-		// 'js:build',
+		'js:build',
 		'img:build',
 		// 'spriteImg:build'
 		// 'fonts:build',
