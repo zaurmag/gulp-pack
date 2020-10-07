@@ -3,10 +3,8 @@ module.exports = function () {
 		$.gulp.src($.webpackConfig.entry)
 			.pipe($.plugins.plumber())
 			.pipe($.webpackStream($.webpackConfig))
-			.pipe($.gulp.dest($.webpackConfig.output.path)
-				.pipe($.browserSync.reload({
-					stream: true,
-				})));
+			.pipe($.gulp.dest($.webpackConfig.output.path))
+			.pipe($.browserSync.reload({stream: true}));
 		done();
 	});
 };
