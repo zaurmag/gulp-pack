@@ -24,7 +24,6 @@ module.exports = {
 			},
 		],
 	},
-	mode: 'development',
 	optimization: {
 		splitChunks: {
 			cacheGroups: {

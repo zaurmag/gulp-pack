@@ -6,6 +6,10 @@ global.$ = {
 	// eslint-disable-next-line global-require
 	gulp: require('gulp'),
 	// eslint-disable-next-line global-require
+	webpackConfig: require('./webpack.config'),
+	// eslint-disable-next-line global-require
+	yargs: require('yargs'),
+	// eslint-disable-next-line global-require
 	del: require('del'),
 	// eslint-disable-next-line global-require
 	browserSync: require('browser-sync').create(),
@@ -26,10 +30,33 @@ global.$ = {
 	}),
 };
 
+let argv = $.yargs.default({
+	cache: true,
+	ci: false,
+	debug: true,
+	fix: false,
+	minify: false,
+	minifyHtml: null,
+	minifyCss: null,
+	minifyJs: null,
+	minifySvg: null,
+	notify: true,
+	open: true,
+	port: 3000,
+	spa: false,
+	throwErrors: false,
+}).argv;
+
 $.path.task.forEach((taskPath) => {
 	// eslint-disable-next-line global-require
 	require(taskPath)();
 });
+
+if (argv.minifyJs) {
+	$.webpackConfig.mode = 'production';
+} else {
+	$.webpackConfig.mode = $.webpackConfig.mode || 'development';
+}
 
 $.gulp.task('build', $.gulp.series(
 	'spriteSvg:build',
