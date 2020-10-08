@@ -1,6 +1,4 @@
-const webpack = require('webpack');
 const path = require('path');
-const NODE_ENV = process.env.NODE_ENV || 'development';
 
 module.exports = {
 	entry: './src/base/js/index.js',
@@ -29,7 +27,7 @@ module.exports = {
 			cacheGroups: {
 				vendor: {
 					chunks: 'initial',
-					test: /node_modules|bower_components/,
+					test: /node_modules/,
 					name: 'vendor',
 					enforce: true,
 				},
@@ -38,16 +36,3 @@ module.exports = {
 	},
 	devtool: 'source-map',
 };
-
-// eslint-disable-next-line eqeqeq
-if (NODE_ENV === 'production') {
-	module.exports.plugins(
-		new webpack.optimize.UglifyJsPlugin({
-			compress: {
-				warnings: false,
-				drop_console: true,
-				unsafe: true,
-			},
-		}),
-	);
-}
