@@ -1,2 +1,2 @@
-import('../../vendor/go-top/go-top');
-// import('./test');
+import '../../vendor/vendor';
+import './test';
