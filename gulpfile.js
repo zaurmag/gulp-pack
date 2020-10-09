@@ -8,7 +8,22 @@ global.$ = {
 	// eslint-disable-next-line global-require
 	webpackConfig: require('./webpack.config'),
 	// eslint-disable-next-line global-require
-	yargs: require('yargs'),
+	yargs: require('yargs').default({
+		cache: true,
+		ci: false,
+		debug: true,
+		fix: false,
+		minify: false,
+		minifyHtml: null,
+		minifyCss: false,
+		minifyJs: null,
+		minifySvg: null,
+		notify: true,
+		open: true,
+		port: 3000,
+		spa: false,
+		throwErrors: false,
+	}).argv,
 	// eslint-disable-next-line global-require
 	del: require('del'),
 	// eslint-disable-next-line global-require
@@ -30,29 +45,12 @@ global.$ = {
 	}),
 };
 
-let argv = $.yargs.default({
-	cache: true,
-	ci: false,
-	debug: true,
-	fix: false,
-	minify: false,
-	minifyHtml: null,
-	minifyCss: null,
-	minifyJs: null,
-	minifySvg: null,
-	notify: true,
-	open: true,
-	port: 3000,
-	spa: false,
-	throwErrors: false,
-}).argv;
-
 $.path.task.forEach((taskPath) => {
 	// eslint-disable-next-line global-require
 	require(taskPath)();
 });
 
-if (argv.minifyJs) {
+if ($.yargs.minifyJs) {
 	$.webpackConfig.mode = 'production';
 } else {
 	$.webpackConfig.mode = $.webpackConfig.mode || 'development';
@@ -62,8 +60,7 @@ $.gulp.task('build', $.gulp.series(
 	'spriteSvg:build',
 	$.gulp.parallel(
 		'pug:build',
-		// 'style:build',
-		'styleDev:build',
+		'style:build',
 		'js:build',
 		'img:build',
 		// 'spriteImg:build'

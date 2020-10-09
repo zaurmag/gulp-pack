@@ -5,7 +5,7 @@ module.exports = function () {
 		// Without critical
 		$.gulp.watch(path.path.watch.json, {usePolling: true}, $.gulp.series('pug:build'));
 		$.gulp.watch(path.path.watch.pug, {usePolling: true}, $.gulp.series('pug:build'));
-		$.gulp.watch(path.path.watch.style, {usePolling: true}, $.gulp.series('styleDev:build'));
+		$.gulp.watch(path.path.watch.style, {usePolling: true}, $.gulp.series('style:build'));
 
 		// Critical
 		// $.gulp.watch(path.path.watch.json, {usePolling: true}, $.gulp.series('pug:build', 'critical:build'));

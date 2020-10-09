@@ -37,6 +37,7 @@
     "gulp-csso": "latest",
     "gulp-data": "latest",
     "gulp-eslint": "latest",
+    "gulp-if": "latest",
     "gulp-load-plugins": "latest",
     "gulp-plumber": "latest",
     "gulp-pug": "latest",
