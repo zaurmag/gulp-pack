@@ -1,0 +1,67 @@
+/** Form messages **/
+
+.form {
+    &__error {
+        color: $red;
+        text-align: center;
+        padding-top: 8px;
+        font-size: 14px;
+    }
+    &__sys-message {
+        text-align: center;
+    }
+    &__success-title {
+        color: $green;
+        font: 700 20px Arial, sans-serif;
+        margin: 0 0 15px;
+    }
+    &__success-text {
+        color: #333;
+        font-size: 15px;
+        margin: 0;
+    }
+}
+
+/** === Sending btn === **/
+.sending {
+    .btn.btn-submit{
+        border-color: transparent;
+        animation: barberpole 0.5s linear infinite;
+        background-size: 30px 30px;
+        background-color: #3cb5fe;
+        background-image: linear-gradient(45deg, rgba(73, 108, 174, 0.5) 25%, transparent 25%, transparent 50%, rgba(73, 108, 174, 0.5) 50%, rgba(73, 108, 174, 0.5) 75%, transparent 75%, transparent);
+    }
+}
+
+@-webkit-keyframes barberpole {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 60px 30px;
+    }
+}
+@-moz-keyframes barberpole {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 60px 30px;
+    }
+}
+@-o-keyframes barberpole {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 60px 30px;
+    }
+}
+@keyframes barberpole {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 60px 30px;
+    }
+}
