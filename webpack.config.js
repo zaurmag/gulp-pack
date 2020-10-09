@@ -4,7 +4,9 @@ module.exports = {
 	entry: './src/base/js/index.js',
 	output: {
 		path: path.resolve(__dirname, 'dist/js'),
-		filename: 'scripts.js',
+		publicPath: '/',
+		filename: '[name].js',
+		chunkFilename: '[name].chunk.js',
 	},
 	module: {
 		rules: [
@@ -13,11 +15,6 @@ module.exports = {
 				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader',
-					query: {
-						presets: [
-							['@babel/preset-env', {modules: false}],
-						],
-					},
 				},
 			},
 		],
@@ -27,7 +24,7 @@ module.exports = {
 			cacheGroups: {
 				vendor: {
 					chunks: 'initial',
-					test: /node_modules/,
+					test: /[\\/]node_modules[\\/]/,
 					name: 'vendor',
 					enforce: true,
 				},
