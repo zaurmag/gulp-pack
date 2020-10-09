@@ -41,7 +41,6 @@
     "gulp-load-plugins": "latest",
     "gulp-plumber": "latest",
     "gulp-pug": "latest",
-    "gulp-pug2": "latest",
     "gulp-pxtorem": "latest",
     "gulp-rename": "latest",
     "gulp-replace": "latest",
