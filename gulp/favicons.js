@@ -11,7 +11,7 @@ module.exports = function (done) {
 				html: 'favicons.html',
 				pipeHTML: true,
 				url: 'http://localhost/',
-				path: './images/favicons/',
+				path: '/images/favicons/',
 				replace: true,
 				version: 3,
 				lang: 'ru-RU',
@@ -28,6 +28,7 @@ module.exports = function (done) {
 				},
 			}))
 			.pipe($.gulp.dest(path.path.build.imgFavicons));
+		// eslint-disable-next-line no-unreachable
 		done();
 	});
 
@@ -37,7 +38,7 @@ module.exports = function (done) {
 			.pipe($.plugins.favicons({
 				html: 'favicons-logo.html',
 				pipeHTML: true,
-				path: './images/favicons/',
+				path: '/images/favicons/',
 				replace: true,
 				icons: {
 					appleIcon: false,
@@ -52,6 +53,7 @@ module.exports = function (done) {
 				},
 			}))
 			.pipe($.gulp.dest(path.path.build.imgFavicons));
+		// eslint-disable-next-line no-unreachable
 		done();
 	});
 };
