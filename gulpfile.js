@@ -15,7 +15,7 @@ global.$ = {
 		fix: false,
 		minify: false,
 		minifyHtml: null,
-		minifyCss: false,
+		minifyCss: null,
 		minifyJs: null,
 		minifySvg: null,
 		notify: true,
@@ -44,6 +44,12 @@ global.$ = {
 		],
 	}),
 };
+
+$.yargs.minify = !!$.yargs.minify;
+$.yargs.minifyHtml = $.yargs.minifyHtml !== null ? !!$.yargs.minifyHtml : $.yargs.minify;
+$.yargs.minifyCss = $.yargs.minifyCss !== null ? !!$.yargs.minifyCss : $.yargs.minify;
+$.yargs.minifyJs = $.yargs.minifyJs !== null ? !!$.yargs.minifyJs : $.yargs.minify;
+$.yargs.minifySvg = $.yargs.minifySvg !== null ? !!$.yargs.minifySvg : $.yargs.minify;
 
 $.path.task.forEach((taskPath) => {
 	// eslint-disable-next-line global-require
