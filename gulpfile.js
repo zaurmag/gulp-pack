@@ -9,20 +9,13 @@ global.$ = {
 	webpackConfig: require('./webpack.config'),
 	// eslint-disable-next-line global-require
 	yargs: require('yargs').default({
-		cache: true,
-		ci: false,
-		debug: true,
 		fix: false,
 		minify: false,
 		minifyHtml: null,
 		minifyCss: null,
 		minifyJs: null,
 		minifySvg: null,
-		notify: true,
-		open: true,
-		port: 3000,
-		spa: false,
-		throwErrors: false,
+		ftp: false,
 	}).argv,
 	// eslint-disable-next-line global-require
 	del: require('del'),
@@ -77,7 +70,7 @@ $.gulp.task('build', $.gulp.series(
 
 $.gulp.task('default', $.gulp.series(
 	'build',
-	// 'ftp:build',
+	'ftp:build',
 	$.gulp.parallel(
 		// 'critical:build',
 		'watch',
