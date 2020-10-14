@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "My starter project for web development",
   "main": "gulpfile.js",
-  "scripts": {},
+  "scripts": {
+    "mini": "gulp default --minify true"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zaurmag/gulp-pack.git"
