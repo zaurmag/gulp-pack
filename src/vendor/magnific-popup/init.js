@@ -1,3 +1,5 @@
+import 'magnific-popup';
+
 jQuery(document).ready(($) => {
 	/* Magnific popup init
       ========================================================================= */

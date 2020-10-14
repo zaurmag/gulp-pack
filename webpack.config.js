@@ -19,6 +19,9 @@ module.exports = {
 			},
 		],
 	},
+	externals: {
+		jquery: 'jQuery',
+	},
 	// optimization: {
 	// 	splitChunks: {
 	// 		cacheGroups: {

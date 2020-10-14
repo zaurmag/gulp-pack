@@ -9,7 +9,6 @@ import './inputmask-bundle/init';
 // import './jquery-formstyler/init';
 
 // Magnific Popup
-import './magnific-popup/jquery.magnific-popup';
 import './magnific-popup/init';
 
 // Owl Carousel
