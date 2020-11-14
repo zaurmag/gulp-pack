@@ -1,0 +1,14 @@
+#callback.mfp-hide.mfp-white-block
+    .form
+        form#callbackForm(action='#' novalidate)
+            fieldset.form__fields.form__hide-success
+                .form-group
+                    input#name.form-control.form-control-lg(name='name', type='text', placeholder='Ваше имя*', required)
+
+                .form-group
+                    input#phone.form-control.form-control-lg.phone-mask--js(name='phone', type='tel', placeholder='Ваш телефон*', required)
+
+                .form-group
+                    button.btn-submit--js.btn-s50.btn.btn-success.btn-block(type='submit') Отправить
+
+            input(type='hidden', name='go', value='callback')
