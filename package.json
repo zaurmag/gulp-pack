@@ -4,7 +4,11 @@
   "description": "My starter project for web development",
   "main": "gulpfile.js",
   "scripts": {
-    "mini": "gulp default --minify true"
+    "Start": "gulp default",
+    "Minify": "gulp default --minify true",
+    "Start Ftp": "gulp default --ftp true",
+    "Start Js": "gulp default --minify-js true",
+    "Start Css": "gulp default --minify-css true"
   },
   "repository": {
     "type": "git",
