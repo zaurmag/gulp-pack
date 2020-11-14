@@ -22,14 +22,16 @@
     }
 }
 
-/** === Sending btn === **/
-.sending {
-    .btn.btn-submit{
-        border-color: transparent;
-        animation: barberpole 0.5s linear infinite;
-        background-size: 30px 30px;
-        background-color: #3cb5fe;
-        background-image: linear-gradient(45deg, rgba(73, 108, 174, 0.5) 25%, transparent 25%, transparent 50%, rgba(73, 108, 174, 0.5) 50%, rgba(73, 108, 174, 0.5) 75%, transparent 75%, transparent);
+// Sending state
+.btn {
+    &.btn-submit {
+        &.is-sending {
+            border-color: transparent;
+            animation: barberpole 0.5s linear infinite;
+            background-size: 30px 30px;
+            background-color: $primary;
+            background-image: linear-gradient(45deg, rgba($primary, 0.5) 25%, transparent 25%, transparent 50%, rgba($primary, 0.5) 50%, rgba($primary, 0.5) 75%, transparent 75%, transparent);
+        }
     }
 }
 
