@@ -1,0 +1,21 @@
+.sidebar
+    &--yellow-offset
+        position: relative
+        padding-top: 150px
+
+        &::before
+            background-color: rgba($yellow, 0.2)
+            content: ""
+            position: absolute
+            top: 0
+            left: -70px
+            right: 0
+            display: block
+            height: 100px
+            z-index: 0
+
+    &--left
+        @include media-breakpoint-up(lg)
+            position: relative
+            left: -75%
+
