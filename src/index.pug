@@ -12,16 +12,17 @@ block top-position
                 .module__title Модуль в позиции TOP
 
 block columns
-    main.content__no-cols.col-12
+    main.content--right.col-lg-9
         article.page.textblock
-            //h1.text-primary.mb-5 !{title}
+            h1.mb-5 !{title}
 
-            p
-                != 'Строка текста с тегом <strong>выделения</strong>.'
+            a.btn.btn-primary.mfp-form--js(href="#callback") Заказать звонок
 
-    //.pagination
-    //    include ./components/pagination/pagination
+        //-pagination
+        include ./components/pagination/pagination
 
+    //- Include sidebar
+    include ./components/sidebar/sidebar--left
 
 
 block bottom-position

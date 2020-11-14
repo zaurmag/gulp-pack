@@ -1,0 +1,17 @@
+.content
+    padding-top: 10px
+
+    &--left
+        position: relative
+        z-index: 1
+
+    @include media-breakpoint-up(lg)
+        &--right,
+        &--middle
+            position: relative
+            left: 25%
+
+        &--middle
+            + .sidebar--right
+                position: relative
+                left: 25%

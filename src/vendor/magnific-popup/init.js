@@ -1,13 +1,10 @@
 import 'magnific-popup';
 
 jQuery(document).ready(($) => {
-	/* Magnific popup init
-      ========================================================================= */
-
 	/**
      * Type image
      */
-	$('.popup-image--js').magnificPopup({
+	$('.mfp-image--js').magnificPopup({
 		type: 'image',
 		closeOnContentClick: true,
 		closeBtnInside: true,
@@ -30,7 +27,7 @@ jQuery(document).ready(($) => {
 	/**
      * Type inline
      */
-	$('.popup-window--js').magnificPopup({
+	$('.mfp-window--js').magnificPopup({
 		type: 'inline',
 		fixedContentPos: true,
 		fixedBgPos: true,
@@ -45,7 +42,7 @@ jQuery(document).ready(($) => {
 	/**
      * Type iframe (video)
      */
-	$('.popup-video--js').magnificPopup({
+	$('.mfp-video--js').magnificPopup({
 		type: 'iframe',
 		mainClass: 'mfp-scale',
 		removalDelay: 160,
@@ -56,7 +53,7 @@ jQuery(document).ready(($) => {
 	/**
      * Type inline - focus on filed #name
      */
-	$('.popup-form--js').magnificPopup({
+	$('.mfp-form--js').magnificPopup({
 		type: 'inline',
 		fixedContentPos: true,
 		fixedBgPos: true,
@@ -64,8 +61,29 @@ jQuery(document).ready(($) => {
 		closeBtnInside: true,
 		preloader: false,
 		midClick: true,
+		mainClass: 'mfp-top-up',
+		removalDelay: 160,
+		focus: '#name, #username',
+		// callbacks: {
+		// 	open() {
+		//
+		// 	},
+		// },
+	});
+
+	/**
+     * Type ajax
+     */
+	$('.mfp-ajax--js').magnificPopup({
+		type: 'ajax',
+		fixedContentPos: true,
+		fixedBgPos: true,
+		overflowY: 'auto',
+		closeBtnInside: true,
+		preloader: true,
+		tLoading: '<img src="/templates/template_zm_it/images/preload.gif" />',
+		midClick: true,
 		mainClass: 'mfp-scale',
 		removalDelay: 160,
-		focus: '#name',
 	});
 }); // end ready

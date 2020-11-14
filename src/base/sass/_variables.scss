@@ -1,9 +1,6 @@
 // Font
 $font-family-base: "Roboto", sans-serif;
 
-// Colors
-$blue: #435993;
-
 // Grid containers
 $container-max-widths: (
 	smm: 445px,
@@ -35,6 +32,7 @@ $spacers: map-merge(
 		10: ($spacer * 0.625), // 10px
 		15: ($spacer * 0.9375), // 15px
 		20: ($spacer * 1.25), // 20px
+		25: ($spacer * 1.5625), // 25px
 		30: ($spacer * 1.875), // 30px
 		40: ($spacer * 2.5), // 40px
 		50: ($spacer * 3.125), // 50px
@@ -90,7 +88,7 @@ $yellow:  #ffc107;
 $green:   #28a745;
 $teal:    #20c997;
 $cyan:    #17a2b8;
-$dark-tan: #b18248;
+$brown:   #b18248;
 
 $colors: ();
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -121,7 +119,7 @@ $warning:       $yellow;
 $danger:        $red;
 $light:         $gray-100;
 $dark:          $gray-800;
-$dark-tan: $dark-tan;
+$brown: 		$brown;
 
 $theme-colors: ();
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -135,7 +133,7 @@ $theme-colors: map-merge(
 		"danger":     $danger,
 		"light":      $light,
 		"dark":       $dark,
-		"dark-tan":   $dark-tan
+		"brown":      $brown
 	),
 	$theme-colors
 );

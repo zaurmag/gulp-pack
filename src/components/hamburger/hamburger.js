@@ -1,48 +1,49 @@
-jQuery(document).ready(function($) {
-    var $hamburger = $('.hamburger--js');
-    var $menu = $('.menu');
+import enquire from 'enquire.js';
+import {overlayAddFn} from '../overlay/overlay';
+import {overlayRemFn} from '../overlay/overlay';
 
-    enquire.register("screen and (max-width: 992px)", {
-        match: function() {
+jQuery(document).ready(($) => {
+	let $hamburger = $('.hamburger--js');
+	let $menu = $('.menu');
 
-        },
-        deferSetup: true,
-        setup: function() {
-            $hamburger.on('click', function (event) {
-                event.preventDefault();
-                event.stopPropagation();
+	function showMenu(menu) {
+		menu.addClass('is-active');
+		overlayAddFn();
+	}
 
-                if ($menu.hasClass('is-active')) {
-                    hideMenu($menu);
+	function hideMenu(menu) {
+		menu.removeClass('is-active');
+		overlayRemFn();
+	}
 
-                } else {
-                    showMenu($menu);
-                }
-            });
+	enquire.register('screen and (max-width: 992px)', {
+		// match() {},
+		deferSetup: true,
+		setup() {
+			$hamburger.on('click', (event) => {
+				event.preventDefault();
+				event.stopPropagation();
 
-            // Hide sidebar on page click/tap.
-            $(document).on('click touchend', function(event) {
-                if ($(event.target).closest($hamburger).length || $(event.target).closest($menu).length) return;
-                hideMenu($menu);
-            });
+				if ($menu.hasClass('is-active')) {
+					hideMenu($menu);
+				} else {
+					showMenu($menu);
+				}
+			});
 
-            $('.menu__mobile-close--js').on('click', function(e){
-                e.preventDefault();
-                hideMenu($menu);
-            });
-        },
-        unmatch: function() {
-            //$(document).off();
-        }
-    });
-}); // end ready
+			// Hide sidebar on page click/tap.
+			$(document).on('click touchend', (event) => {
+				if ($(event.target).closest($hamburger).length || $(event.target).closest($menu).length) {
+					return;
+				}
+				hideMenu($menu);
+			});
 
-function showMenu(menu) {
-    menu.addClass('is-active');
-    overlayAddFn();
-}
-
-function hideMenu(menu) {
-    menu.removeClass('is-active');
-    overlayRemFn();
-}
+			$('.menu__mobile-close--js').on('click', (e) => {
+				e.preventDefault();
+				hideMenu($menu);
+			});
+		},
+		// unmatch() {}
+	});
+});
