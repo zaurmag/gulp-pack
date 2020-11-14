@@ -60,12 +60,13 @@
     "vinyl-ftp": "latest",
     "webpack": "latest",
     "webpack-stream": "latest",
-    "yargs": "latest"
+    "yargs": "latest",
+    "gulp-favicons": "latest"
   },
   "dependencies": {
     "bootstrap": "latest",
-    "gulp-favicons": "latest",
     "magnific-popup": "latest",
-    "owl.carousel": "latest"
+    "owl.carousel": "latest",
+    "enquire.js": "latest"
   }
 }
