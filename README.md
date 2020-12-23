@@ -15,3 +15,5 @@
 <pre>bem create component-name -n js</pre>
 
 После данной команды создаться компонент с файлами .pug и .sass, js-файл будет исключен.
+
+Подробнее про bem-tools-creators можно почитать <a href="https://github.com/bem-tools/bem-tools-create" target="_blank">тут</a>.
