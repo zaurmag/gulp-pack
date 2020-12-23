@@ -8,7 +8,8 @@
     "Minify": "gulp default --minify true",
     "Start Ftp": "gulp default --ftp true",
     "Start Js": "gulp default --minify-js true",
-    "Start Css": "gulp default --minify-css true"
+    "Start Css": "gulp default --minify-css true",
+    "MinifyFtp": "gulp default --minify true --ftp true"
   },
   "repository": {
     "type": "git",
@@ -23,16 +24,18 @@
   "author": "Zaur Magomedov",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "latest",
-    "@babel/plugin-proposal-class-properties": "latest",
-    "@babel/plugin-proposal-private-methods": "latest",
-    "@babel/plugin-syntax-dynamic-import": "latest",
-    "@babel/plugin-transform-runtime": "latest",
-    "@babel/preset-env": "latest",
-    "@babel/runtime": "latest",
-    "babel-eslint": "latest",
-    "babel-loader": "latest",
+    "@babel/core": "7.4.3",
+    "@babel/plugin-proposal-class-properties": "7.4.0",
+    "@babel/plugin-proposal-private-methods": "7.4.3",
+    "@babel/plugin-syntax-dynamic-import": "7.2.0",
+    "@babel/plugin-transform-runtime": "7.4.3",
+    "@babel/preset-env": "7.4.3",
+    "@babel/runtime": "7.4.3",
+    "babel-eslint": "10.0.1",
+    "babel-loader": "8.0.5",
     "browser-sync": "latest",
+    "bem-tools-core": "bem-tools/bem-tools-core",
+    "bem-tools-create": "bem-tools/bem-tools-create",
     "critical": "latest",
     "del": "latest",
     "eslint": "latest",
@@ -64,9 +67,11 @@
     "gulp-favicons": "latest"
   },
   "dependencies": {
+    "@babel/polyfill": "7.4.3",
     "bootstrap": "latest",
     "magnific-popup": "latest",
     "owl.carousel": "latest",
-    "enquire.js": "latest"
+    "enquire.js": "latest",
+    "svg4everybody": "latest"
   }
 }
