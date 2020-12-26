@@ -68,10 +68,10 @@
   },
   "dependencies": {
     "@babel/polyfill": "7.4.3",
-    "bootstrap": "latest",
+    "bootstrap": "^5.0.0-beta1",
+    "enquire.js": "latest",
     "magnific-popup": "latest",
     "owl.carousel": "latest",
-    "enquire.js": "latest",
     "svg4everybody": "latest"
   }
 }
