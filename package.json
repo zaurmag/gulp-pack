@@ -9,7 +9,8 @@
     "Start Ftp": "gulp default --ftp true",
     "Start Js": "gulp default --minify-js true",
     "Start Css": "gulp default --minify-css true",
-    "MinifyFtp": "gulp default --minify true --ftp true"
+    "MinifyFtp": "gulp default --minify true ftp:build --ftp true",
+    "Ftp": "gulp ftp:build --ftp true"
   },
   "repository": {
     "type": "git",
@@ -33,9 +34,9 @@
     "@babel/runtime": "7.4.3",
     "babel-eslint": "10.0.1",
     "babel-loader": "8.0.5",
-    "browser-sync": "latest",
     "bem-tools-core": "bem-tools/bem-tools-core",
     "bem-tools-create": "bem-tools/bem-tools-create",
+    "browser-sync": "latest",
     "critical": "latest",
     "del": "latest",
     "eslint": "latest",
@@ -46,6 +47,7 @@
     "gulp-csso": "latest",
     "gulp-data": "latest",
     "gulp-eslint": "latest",
+    "gulp-favicons": "latest",
     "gulp-if": "latest",
     "gulp-load-plugins": "latest",
     "gulp-plumber": "latest",
@@ -58,17 +60,17 @@
     "gulp-svg-sprite": "latest",
     "gulp-tinypng": "latest",
     "gulp-watch": "latest",
+    "gulp-webp": "^4.0.1",
     "gulp-zip": "latest",
     "gulp.spritesmith": "latest",
     "vinyl-ftp": "latest",
     "webpack": "latest",
     "webpack-stream": "latest",
-    "yargs": "latest",
-    "gulp-favicons": "latest"
+    "yargs": "latest"
   },
   "dependencies": {
     "@babel/polyfill": "7.4.3",
-    "bootstrap": "^5.0.0-beta1",
+    "bootstrap": "^5.0.0-beta3",
     "enquire.js": "latest",
     "magnific-popup": "latest",
     "owl.carousel": "latest",

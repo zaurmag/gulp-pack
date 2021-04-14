@@ -9,7 +9,21 @@ jQuery(document).ready(($) => {
 		closeOnContentClick: true,
 		closeBtnInside: true,
 		fixedContentPos: true,
-		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+		overflowY: 'auto',
+		mainClass: 'mfp-no-margins mfp-scale',
+		removalDelay: 160,
+	});
+
+	/**
+	 * Type image gallery
+	 */
+	$('.mfp-gallery--js').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: true,
+		fixedContentPos: true,
+		mainClass: 'mfp-no-margins mfp-scale', // class to remove default margin from left and right side
+		removalDelay: 160,
 		gallery: {
 			enabled: true,
 			navigateByImgClick: true,
@@ -35,7 +49,7 @@ jQuery(document).ready(($) => {
 		closeBtnInside: true,
 		preloader: false,
 		midClick: true,
-		mainClass: 'mfp-scale',
+		mainClass: 'mfp-top-up',
 		removalDelay: 160,
 	});
 

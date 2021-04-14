@@ -5,6 +5,7 @@ module.exports = function () {
 			.pipe($.plugins.changed(path.path.build.img))
 			.pipe($.plugins.plumber())
 		// .pipe($.plugins.tinypng('ключ API'))
+			.pipe($.plugins.webp()) // Options - https://github.com/imagemin/imagemin-webp#imageminwebpoptions
 			.pipe($.gulp.dest(path.path.build.img));
 		done();
 	});
