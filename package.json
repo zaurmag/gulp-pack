@@ -75,6 +75,7 @@
     "@babel/polyfill": "7.4.3",
     "bootstrap": "latest",
     "enquire.js": "latest",
+    "inputmask": "^5.0.6",
     "magnific-popup": "latest",
     "owl.carousel": "latest",
     "svg4everybody": "latest"

@@ -1,7 +1,6 @@
-let path = require('./path/path.js');
+const path = require('./path/path.js');
 
 module.exports = function () {
-	// eslint-disable-next-line consistent-return
 	$.gulp.task('ftp:build', (done) => {
 		if ($.yargs.ftp) {
 			let conn = $.vinylFtp.create({
@@ -9,15 +8,11 @@ module.exports = function () {
 				user: 'ftp',
 				password: 'ftp',
 				parallel: 10,
-				// log:      gutil.log
-			});
+				// log: gutil.log
+			})
 
 			let globs = [
-				path.path.build.root + '**/!(*.html)', // Все файлы, кроме *.html
-				// `${path.path.build.style}/**`,
-				// `${path.path.build.js}/**`,
-				// `${path.path.build.img}/**`,
-				// `${path.path.build.fonts}/**`,
+				`${path.path.build.root}**/!(*.html)`, // Все файлы, кроме *.html
 			];
 
 			// using base = '.' will transfer everything to /public_html correctly
@@ -28,10 +23,8 @@ module.exports = function () {
 				buffer: false,
 			})
 				.pipe(conn.newer('.')) // only upload newer files
-				.pipe(conn.dest('.'));
+				.pipe(conn.dest('.'))
 		}
-		// eslint-disable-next-line no-unreachable
-		done();
-	});
-};
-
+		done()
+	})
+}

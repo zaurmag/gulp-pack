@@ -1,4 +1,4 @@
-import '../../vendor/vendor';
+import '../../vendor/vendor'
 
 // Components
-import '../../components/form/form';
+import '../../components/form/form'

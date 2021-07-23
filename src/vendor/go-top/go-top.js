@@ -1,27 +1,27 @@
 (function ($) {
 	// eslint-disable-next-line func-names
 	jQuery.fn.scrollToTop = function () {
-		$(this).hide().removeAttr('href');
+		$(this).hide().removeAttr('href')
 		// eslint-disable-next-line eqeqeq
 		if ($(window).scrollTop() != '0') {
-			$(this).fadeIn('slow');
+			$(this).fadeIn('slow')
 		}
-		let scrollDiv = $(this);
+		let scrollDiv = $(this)
 		$(window).scroll(() => {
 			if ($(window).scrollTop() === '0') {
-				$(scrollDiv).fadeOut('slow');
+				$(scrollDiv).fadeOut('slow')
 			} else {
-				$(scrollDiv).fadeIn('slow');
+				$(scrollDiv).fadeIn('slow')
 			}
-		});
+		})
 		$(this).click(() => {
 			$('html, body').animate({
 				scrollTop: 0,
-			}, 'slow');
-		});
-	};
-})(jQuery);
+			}, 'slow')
+		})
+	}
+})(jQuery)
 
 jQuery(document).ready(($) => {
-	$('.go-top').scrollToTop();
-});
+	$('.go-top').scrollToTop()
+})

@@ -1,4 +1,4 @@
-import 'magnific-popup';
+import 'magnific-popup'
 
 jQuery(document).ready(($) => {
 	/**
@@ -12,7 +12,7 @@ jQuery(document).ready(($) => {
 		overflowY: 'auto',
 		mainClass: 'mfp-no-margins mfp-scale',
 		removalDelay: 160,
-	});
+	})
 
 	/**
 	 * Type image gallery
@@ -36,7 +36,7 @@ jQuery(document).ready(($) => {
 			enabled: true,
 			duration: 300, // don't foget to change the duration also in CSS
 		},
-	});
+	})
 
 	/**
      * Type inline
@@ -51,7 +51,7 @@ jQuery(document).ready(($) => {
 		midClick: true,
 		mainClass: 'mfp-top-up',
 		removalDelay: 160,
-	});
+	})
 
 	/**
      * Type iframe (video)
@@ -62,7 +62,7 @@ jQuery(document).ready(($) => {
 		removalDelay: 160,
 		preloader: true,
 		fixedContentPos: false,
-	});
+	})
 
 	/**
      * Type inline - focus on filed #name
@@ -83,7 +83,7 @@ jQuery(document).ready(($) => {
 		//
 		// 	},
 		// },
-	});
+	})
 
 	/**
      * Type ajax
@@ -99,5 +99,5 @@ jQuery(document).ready(($) => {
 		midClick: true,
 		mainClass: 'mfp-scale',
 		removalDelay: 160,
-	});
-}); // end ready
+	})
+}) // end ready

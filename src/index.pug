@@ -16,13 +16,15 @@ block columns
         article.page.textblock
             h1.mb-5 !{title}
 
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, praesentium.
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid consectetur consequatur deserunt dolores est ex fugit non odit reprehenderit! Animi commodi itaque magnam maxime nam obcaecati quis quos repudiandae.
+
             p
                 img(src="./images/no-foto.webp" alt="")
 
-            a.btn.btn-primary.mfp-form--js(href="#callback") Заказать звонок
-
         //-pagination
-        include ./components/pagination/pagination
+        .pagination.mt-30
+            include ./components/pagination/pagination
 
     //- Include sidebar
     include ./components/sidebar/sidebar--left

@@ -4,15 +4,13 @@
         display: flex
         justify-content: center
         flex-wrap: wrap
-        font-size: 15px
+        font-size: 16px
         list-style: none
 
         li
             margin: 0 3px
 
             a, span
-                border: 1px solid $gray-400
-                border-radius: $border-radius
                 color: #a1b1bc
                 display: block
                 text-decoration: none
@@ -29,11 +27,11 @@
 
             &:hover
                 a
-                    border-color: $teal
-                    color: $teal
+                    border-color: $primary
+                    color: $primary
 
-            &.pagination_active
+            &.is-active
                 a, span
-                    background-color: $teal
-                    border-color: $teal
-                    color: $white
+                    border: 1px solid $primary
+                    border-radius: $border-radius
+                    color: $primary
