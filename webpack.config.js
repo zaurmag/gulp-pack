@@ -22,17 +22,5 @@ module.exports = {
 	externals: {
 		jquery: 'jQuery',
 	},
-	// optimization: {
-	// 	splitChunks: {
-	// 		cacheGroups: {
-	// 			vendor: {
-	// 				chunks: 'initial',
-	// 				test: /[\\/]node_modules[\\/]/,
-	// 				name: 'vendor',
-	// 				enforce: true,
-	// 			},
-	// 		},
-	// 	},
-	// },
 	devtool: 'source-map',
 };

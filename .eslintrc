@@ -240,7 +240,7 @@
 		],
 		"no-use-before-define": "error",
 		"callback-return": "off",
-		"global-require": "error",
+		"global-require": "warn",
 		"handle-callback-err": "off",
 		"no-mixed-requires": "off",
 		"no-new-require": "error",
@@ -441,7 +441,10 @@
 			}
 		],
 		"require-jsdoc": "off",
-		"semi": "off",
+		"semi": [
+			"warn",
+			"never"
+		],
 		"semi-spacing": [
 			"error",
 			{

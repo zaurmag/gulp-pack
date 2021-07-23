@@ -1,5 +1,5 @@
-jQuery(document).ready(function($) {
-    $('.formstyler--js').styler({
-        //selectSmartPositioning: true
-    });
+jQuery(document).ready(($) => {
+	$('.formstyler--js').styler({
+		// selectSmartPositioning: true
+	});
 });
