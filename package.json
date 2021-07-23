@@ -10,7 +10,9 @@
     "Start Js": "gulp default --minify-js true",
     "Start Css": "gulp default --minify-css true",
     "MinifyFtp": "gulp default --minify true ftp:build --ftp true",
-    "Ftp": "gulp ftp:build --ftp true"
+    "Ftp": "gulp ftp:build --ftp true",
+    "lint:scripts": "./node_modules/.bin/eslint src/**/*.js",
+    "lint:scripts --fix": "./node_modules/.bin/eslint src/**/*.js --fix"
   },
   "repository": {
     "type": "git",
