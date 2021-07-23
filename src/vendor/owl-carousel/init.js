@@ -1,4 +1,4 @@
-import 'owl.carousel';
+import 'owl.carousel'
 
 jQuery(document).ready(($) => {
 	$('.owl-carousel--js').owlCarousel({
@@ -21,5 +21,5 @@ jQuery(document).ready(($) => {
 				items: 3,
 			},
 		},
-	});
-});
+	})
+})

@@ -18,7 +18,7 @@ module.exports = function (done) {
 				}],
 				extract: true,
 			}))
-			.pipe($.gulp.dest(path.path.build.html));
+			.pipe($.gulp.dest(path.path.build.root));
 		done();
 	});
 };

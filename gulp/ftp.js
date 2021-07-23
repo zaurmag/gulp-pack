@@ -13,10 +13,11 @@ module.exports = function () {
 			});
 
 			let globs = [
-				`${path.path.build.style}/**`,
-				`${path.path.build.js}/**`,
-				`${path.path.build.img}/**`,
-				`${path.path.build.fonts}/**`,
+				path.path.build.root + '**/!(*.html)', // Все файлы, кроме *.html
+				// `${path.path.build.style}/**`,
+				// `${path.path.build.js}/**`,
+				// `${path.path.build.img}/**`,
+				// `${path.path.build.fonts}/**`,
 			];
 
 			// using base = '.' will transfer everything to /public_html correctly
