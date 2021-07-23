@@ -1,4 +1,4 @@
-.menu
+.mainmenu
     /**
      * All viewports
      */
@@ -7,9 +7,14 @@
         font-weight: 700
 
         li
+            a
+                text-decoration: none
+                &:hover
+                    color: $primary
+
             &.is-active
                 a
-                    color: $green
+                    color: $primary
 
     /**
      * Mobile
@@ -44,7 +49,6 @@
                 &:not(:last-child)
                     margin-bottom: 20px
 
-
     /**
      * Desktop
      */
@@ -69,6 +73,5 @@
                     transition: color .2s ease
 
                     &:hover
-                        color: $green
                         text-decoration: none
                         transition: color .2s ease
