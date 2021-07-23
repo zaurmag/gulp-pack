@@ -1,3 +1,6 @@
+/**
+ * Options WebP: https://github.com/imagemin/imagemin-webp#imageminwebpoptions
+ */
 let path = require('./path/path.js');
 module.exports = function () {
 	$.gulp.task('img:build', (done) => {
@@ -7,7 +10,7 @@ module.exports = function () {
 			.pipe($.plugins.changed(path.path.build.img))
 			.pipe($.plugins.plumber())
 			// .pipe($.plugins.tinypng(process.env.TINYPNG_KEY_API))
-			.pipe($.plugins.webp()) // Options: https://github.com/imagemin/imagemin-webp#imageminwebpoptions
+			.pipe($.plugins.webp())
 			.pipe($.gulp.dest(path.path.build.img));
 		done();
 	});
