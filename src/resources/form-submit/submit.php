@@ -14,16 +14,16 @@ $formGo = $formData["go"]; ?>
     /**
      * Vars
      */
-    $to = "demo@zaurmag.ru"; // E-mail на который присылать письмо
+    $to = "demo@zaurmag.ru"; // E-mail на который присылать письмо 1111
     $fromEmail = "no-reply@zaurmag.ru"; // E-mail от имени которого приходит письмо. Почта на домене сайта.
 
     switch ($formGo) {
         case 'opt':
-            $subject = "Заявка на прайс-лист для оптовика с сайта imperiya-holoda.ru";
+            $subject = "Заявка на прайс-лист для оптовика с сайта ***";
             break;
 
         default:
-            $subject = "Сообщение с сайта imperiya-holoda.ru";
+            $subject = "Сообщение с сайта ****";
             break;
     }
 
