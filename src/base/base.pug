@@ -15,12 +15,9 @@ html(lang="ru")
                 //- Include header
                 include ../components/header/header
 
-                block top-position
-
-                .container
-                    if(pageClass != 'homepage')
-                        //- Breadcrumbs
-                        nav.breadcrumbs
+                if (pageClass !== 'homepage')
+                    nav.breadcrumbs.mb-sm-30
+                        .container
                             ul.breadcrumbs__list
                                 li
                                     a(href="/") Главная
@@ -28,6 +25,9 @@ html(lang="ru")
 
                                 li.is-active #{title}
 
+                block top-position
+
+                .container
                     .row
                         block columns
 
