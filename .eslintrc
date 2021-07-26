@@ -273,7 +273,7 @@
 		"capitalized-comments": "off",
 		"comma-dangle": [
 			"error",
-			"always-multiline"
+			"never"
 		],
 		"comma-spacing": [
 			"error",
@@ -404,7 +404,7 @@
 		],
 		"object-curly-spacing": [
 			"error",
-			"never"
+			"always"
 		],
 		"object-property-newline": "error",
 		"one-var": [
@@ -509,10 +509,7 @@
 		],
 		"wrap-regex": "off",
 		"arrow-body-style": "off",
-		"arrow-parens": [
-			"error",
-			"always"
-		],
+		"arrow-parens": "off",
 		"arrow-spacing": [
 			"error",
 			{

@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zaurmag/gulp-pack.git"
+    "url": "https://github.com/zaurmag/gulp-pack.git"
   },
   "keywords": [
     "gulp",
