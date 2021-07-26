@@ -1,49 +1,45 @@
 import enquire from 'enquire.js'
-import {overlayAddFn} from '../overlay/overlay'
-import {overlayRemFn} from '../overlay/overlay'
+import { overlayAdd, overlayRemove } from '../overlay/overlay'
 
-jQuery(document).ready(($) => {
-	let $hamburger = $('.hamburger--js')
-	let $menu = $('.menu')
+const $hamburger = document.querySelector('.hamburger--js')
+const $mainmenu = document.querySelector('.mainmenu--js')
+const $closeBtn = document.querySelector('.mainmenu--close')
 
-	function showMenu(menu) {
-		menu.addClass('is-active')
-		overlayAddFn()
+function showMenu() {
+	$mainmenu.classList.add('is-active')
+	$hamburger.classList.add('is-active')
+	overlayAdd()
+}
+
+function hideMenu() {
+	$mainmenu.classList.remove('is-active')
+	$hamburger.classList.remove('is-active')
+	overlayRemove()
+}
+
+const clickHandler = event => {
+	event.preventDefault()
+
+	if ($mainmenu.classList.contains('is-active')) {
+		hideMenu()
+	} else {
+		showMenu()
 	}
+}
 
-	function hideMenu(menu) {
-		menu.removeClass('is-active')
-		overlayRemFn()
+enquire.register('screen and (max-width: 992px)', {
+	// deferSetup: true,
+	match() {
+		$hamburger.addEventListener('click', clickHandler)
+		document.addEventListener('click', event => {
+			if (event.target.dataset.backdrop === 'overlay') {
+				hideMenu()
+			}
+		})
+		$closeBtn.addEventListener('click', hideMenu)
+	},
+	unmatch() {
+		$hamburger.removeEventListener('click', clickHandler)
+		$closeBtn.removeEventListener('click', hideMenu)
 	}
-
-	enquire.register('screen and (max-width: 992px)', {
-		// match() {},
-		deferSetup: true,
-		setup() {
-			$hamburger.on('click', (event) => {
-				event.preventDefault()
-				event.stopPropagation()
-
-				if ($menu.hasClass('is-active')) {
-					hideMenu($menu)
-				} else {
-					showMenu($menu)
-				}
-			})
-
-			// Hide sidebar on page click/tap.
-			$(document).on('click touchend', (event) => {
-				if ($(event.target).closest($hamburger).length || $(event.target).closest($menu).length) {
-					return
-				}
-				hideMenu($menu)
-			})
-
-			$('.menu__mobile-close--js').on('click', (e) => {
-				e.preventDefault()
-				hideMenu($menu)
-			})
-		},
-		// unmatch() {}
-	})
 })
