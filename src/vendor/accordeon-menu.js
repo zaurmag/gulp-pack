@@ -6,7 +6,7 @@
 			classNameParent: 'parent',
 			classNameSubmenu: 'sub-menu',
 			classNameCurrent: 'active',
-			destroy: false,
+			destroy: false
 		}, options)
 		let $this = $(this)
 		let submenu = `ul.${options.classNameSubmenu}`

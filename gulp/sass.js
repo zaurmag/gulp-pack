@@ -13,7 +13,6 @@ module.exports = function () {
 				overrideBrowserslist: ['last 2 versions'],
 				cascade: false
 			})))
-			.pipe($.plugins.if($.yargs.minifyCss, $.plugins.rename({ suffix: '.min' }), $.plugins.sourcemaps.write('.')))
 			.pipe($.gulp.dest(path.path.build.style))
 			.pipe($.browserSync.reload({
 				stream: true

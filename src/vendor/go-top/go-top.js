@@ -16,7 +16,7 @@
 		})
 		$(this).click(() => {
 			$('html, body').animate({
-				scrollTop: 0,
+				scrollTop: 0
 			}, 'slow')
 		})
 	}

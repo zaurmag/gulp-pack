@@ -6,7 +6,7 @@
 		options = $.extend({
 			offset: 200,
 			timeAnimate: 500,
-			destroy: false,
+			destroy: false
 		}, options)
 		let fixClass = $(this)
 		function addClassFn() {

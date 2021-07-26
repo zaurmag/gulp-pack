@@ -51,7 +51,7 @@ $.gulp.task('build', $.gulp.series(
 		'js:build',
 		'img:build',
 		'spriteImg:build',
-		'resources:build',
+		'resources:build'
 	))
 );
 
