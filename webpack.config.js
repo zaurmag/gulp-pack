@@ -6,7 +6,7 @@ module.exports = {
 		path: path.resolve(__dirname, 'dist/js'),
 		publicPath: '/',
 		filename: '[name].js',
-		chunkFilename: '[name].js',
+		chunkFilename: '[name].js'
 	},
 	module: {
 		rules: [
@@ -14,7 +14,7 @@ module.exports = {
 				test: /\.js$/,
 				exclude: /node_modules/,
 				use: {
-					loader: 'babel-loader',
+					loader: 'babel-loader'
 				},
 			},
 		],

@@ -4,7 +4,7 @@ jQuery(document).ready(($) => {
      */
 	// Callback form
 	$('#callbackForm').simpleSendForm({
-		autoClose: true,
+		autoClose: true
 		// mailUrl: '../newquiz/form-submit/submit.php'
 
 	}, () => {

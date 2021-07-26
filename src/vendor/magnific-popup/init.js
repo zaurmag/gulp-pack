@@ -11,7 +11,7 @@ jQuery(document).ready(($) => {
 		fixedContentPos: true,
 		overflowY: 'auto',
 		mainClass: 'mfp-no-margins mfp-scale',
-		removalDelay: 160,
+		removalDelay: 160
 	})
 
 	/**
@@ -27,15 +27,15 @@ jQuery(document).ready(($) => {
 		gallery: {
 			enabled: true,
 			navigateByImgClick: true,
-			preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
+			preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
 		},
 		image: {
-			verticalFit: true,
+			verticalFit: true
 		},
 		zoom: {
 			enabled: true,
-			duration: 300, // don't foget to change the duration also in CSS
-		},
+			duration: 300 // don't foget to change the duration also in CSS
+		}
 	})
 
 	/**
@@ -50,7 +50,7 @@ jQuery(document).ready(($) => {
 		preloader: false,
 		midClick: true,
 		mainClass: 'mfp-top-up',
-		removalDelay: 160,
+		removalDelay: 160
 	})
 
 	/**
@@ -61,7 +61,7 @@ jQuery(document).ready(($) => {
 		mainClass: 'mfp-scale',
 		removalDelay: 160,
 		preloader: true,
-		fixedContentPos: false,
+		fixedContentPos: false
 	})
 
 	/**
@@ -77,7 +77,7 @@ jQuery(document).ready(($) => {
 		midClick: true,
 		mainClass: 'mfp-top-up',
 		removalDelay: 160,
-		focus: '#name, #username',
+		focus: '#name, #username'
 		// callbacks: {
 		// 	open() {
 		//
@@ -98,6 +98,6 @@ jQuery(document).ready(($) => {
 		tLoading: '<img src="/templates/template_zm_it/images/preload.gif" />',
 		midClick: true,
 		mainClass: 'mfp-scale',
-		removalDelay: 160,
+		removalDelay: 160
 	})
 }) // end ready

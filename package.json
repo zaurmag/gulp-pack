@@ -5,18 +5,19 @@
   "main": "gulpfile.js",
   "scripts": {
     "Start": "gulp default",
-    "Minify": "gulp default --minify true",
+    "Minify": "gulp pug:build style:build js:build --minify true",
+    "MinifyHtml": "gulp pug:build --minify-html true",
+    "MinifyJs": "gulp js:build --minify-js true",
+    "MinifyCss": "gulp style:build --minify-css true",
     "Start Ftp": "gulp default --ftp true",
-    "Start Js": "gulp default --minify-js true",
-    "Start Css": "gulp default --minify-css true",
-    "MinifyFtp": "gulp default --minify true ftp:build --ftp true",
     "Ftp": "gulp ftp:build --ftp true",
     "lint:scripts": "./node_modules/.bin/eslint src/**/*.js",
-    "lint:scripts --fix": "./node_modules/.bin/eslint src/**/*.js --fix"
+    "lint:scripts --fix": "./node_modules/.bin/eslint src/**/*.js --fix",
+    "zip": "gulp zip:build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zaurmag/gulp-pack.git"
+    "url": "https://github.com/zaurmag/gulp-pack.git"
   },
   "keywords": [
     "gulp",
@@ -27,6 +28,7 @@
   "author": "Zaur Magomedov",
   "license": "ISC",
   "devDependencies": {
+    "@babel/polyfill": "7.4.3",
     "@babel/core": "7.4.3",
     "@babel/plugin-proposal-class-properties": "7.4.0",
     "@babel/plugin-proposal-private-methods": "7.4.3",
@@ -72,10 +74,9 @@
     "yargs": "latest"
   },
   "dependencies": {
-    "@babel/polyfill": "7.4.3",
     "bootstrap": "latest",
     "enquire.js": "latest",
-    "inputmask": "^5.0.6",
+    "inputmask": "latest",
     "magnific-popup": "latest",
     "owl.carousel": "latest",
     "svg4everybody": "latest"

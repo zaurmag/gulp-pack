@@ -1,10 +1,13 @@
 .mainmenu
+    $self: &
+
     /**
      * All viewports
      */
     &__list
-        font-size: 14px
-        font-weight: 700
+        font-size: 16px
+        font-weight: 500
+        line-height: normal
 
         li
             a
@@ -19,7 +22,7 @@
     /**
      * Mobile
      */
-    @include media-breakpoint-down(md)
+    @include media-breakpoint-down(lg)
         background-color: $white
         position: fixed
         top: 0
@@ -36,8 +39,13 @@
             transform: translateX(0)
             transition: transform 0.3s ease
 
+        &__close-btn
+            position: absolute
+            top: 12px
+            right: 12px
+            font-size: 14px
+
         &__list
-            font-size: 18px
             font-weight: 500
 
             li
@@ -57,21 +65,76 @@
             display: flex
             justify-content: flex-end
 
-            > li
+            > #{$self}__item
                 &:not(:last-child)
                     margin-right: 20px
+
                     @include media-breakpoint-up(xl)
                         margin-right: 40px
-                    @include media-breakpoint-up(xxl)
-                        margin-right: 50px
 
-            li
-                a
-                    color: $gray-600
-                    position: relative
-                    display: block
+                > a
+                    padding-top: 5px
+                    padding-bottom: 5px
+
+        &__item
+            a
+                color: $gray-600
+                position: relative
+                display: block
+                transition: color .2s ease
+
+                &:hover
+                    text-decoration: none
                     transition: color .2s ease
 
-                    &:hover
-                        text-decoration: none
-                        transition: color .2s ease
+        // Dropdowns
+        &__dropdown
+            background-color: $white
+            box-shadow: 0 0 5px 0 rgba($black, 0.2)
+            padding: 10px 15px
+            font-size: 14px
+            position: absolute
+            top: 30px
+            left: 0
+            margin-top: 15px
+            opacity: 0
+            transition: opacity, margin-top .2s ease
+            min-width: 150px
+
+            #{$self}__item
+                a
+                    display: block
+                    padding-top: 8px
+                    padding-bottom: 8px
+
+        // Parent
+        &__item--parent
+            background-color: $white
+            position: relative
+            z-index: 10
+
+            &:hover
+                #{$self}
+                    &__dropdown
+                        transition: opacity, margin-top .2s ease
+                        margin-top: 0
+                        opacity: 1
+
+            > a
+                display: flex
+                align-items: center
+
+                &::after
+                    border-top: 2px solid $gray-600
+                    border-right: 2px solid $gray-600
+                    content: ""
+                    display: block
+                    margin-left: 8px
+                    transform: rotate(135deg)
+                    height: 7px
+                    width: 7px
+
+                &:hover
+                    &::after
+                        border-top-color: $primary
+                        border-right-color: $primary

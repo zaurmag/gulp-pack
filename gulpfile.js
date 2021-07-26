@@ -10,8 +10,7 @@ global.$ = {
 		minifyHtml: null,
 		minifyCss: null,
 		minifyJs: null,
-		minifySvg: null,
-		ftp: false,
+		ftp: false
 	}).argv,
 	del: require('del'),
 	browserSync: require('browser-sync').create(),
@@ -24,9 +23,9 @@ global.$ = {
 			'dependencies',
 			'devDependencies',
 			'optionalDependencies',
-			'peerDependencies',
-		],
-	}),
+			'peerDependencies'
+		]
+	})
 };
 
 $.yargs.minify = !!$.yargs.minify
@@ -52,8 +51,8 @@ $.gulp.task('build', $.gulp.series(
 		'js:build',
 		'img:build',
 		'spriteImg:build',
-		'resources:build',
-	)),
+		'resources:build'
+	))
 );
 
 $.gulp.task('default', $.gulp.series(
@@ -64,5 +63,5 @@ $.gulp.task('default', $.gulp.series(
 		'watch',
 		'bsync',
 		'favicons:lg',
-		'favicons:sm',
+		'favicons:sm'
 	)));

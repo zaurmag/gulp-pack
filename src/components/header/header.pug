@@ -1,9 +1,12 @@
-header.header.py-30
+header.header.py-lg-30.py-10
     .container
         .row.align-items-center
-            .col-md-4
-                include ../logo/logo
+            .col-3.d-lg-none
+                include ../hamburger/hamburger
 
-            .col-md-8
-                //- Include main menu
+            .col-xl-4.col-lg-3.col-6.text-center.text-lg-start
+                .logo
+                    include ../logo/logo
+
+            .col-xl-8.col-lg-9.col-3
                 include ../mainmenu/mainmenu

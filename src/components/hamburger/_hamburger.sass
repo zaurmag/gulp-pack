@@ -1,47 +1,42 @@
-/**
- * Hamburger
- */
-
 .hamburger
-    display: none
+    align-items: center
+    display: flex
+    flex-direction: column
+    outline: none
+    transition: transform .2s ease
+    justify-content: space-between
+    text-decoration: none
+    padding: 0 8px
+    height: 20px
+    width: 40px
+    position: relative
+    z-index: 10
 
-    @include media-breakpoint-down(md)
-        align-items: center
-        display: flex
-        flex-direction: column
-        position: relative
-        outline: none
+    &::before, &::after, > span
+        background: $dark
+        border-radius: 3px
+        content: ""
+        display: block
         transition: transform .2s ease
-        justify-content: space-between
-        min-width: 40px
-        padding: 0 8px
-        height: 20px
-        width: 40px
-        z-index: 10
+        height: 2px
+        width: 100%
+
+    &.is-active
+        transition: transform .3s ease
 
         &::before, &::after, > span
-            background: $dark
-            border-radius: 3px
-            content: ""
-            display: block
-            transition: transform .2s ease
-            height: 2px
-            width: 100%
+            width: 60%
 
-        .is-active &
-            transition: transform .3s ease
+        span
+            left: -50px
+            opacity: 0
 
-            &::before, &::after, > span
-                width: 60%
+        &::before, &::after
+            top: 50%
+            position: absolute
 
-            span
-                left: -50px
-                opacity: 0
+        &::after
+            transform: rotate(-45deg)
 
-            &::before, &::after
-                top: 50%
-                position: absolute
-            &::after
-                transform: rotate(-45deg)
-            &::before
-                transform: rotate(45deg)
+        &::before
+            transform: rotate(45deg)

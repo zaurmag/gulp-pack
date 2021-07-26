@@ -21,7 +21,7 @@
 			captcha: false,
 			captchaPublicKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
 			successMarkup: false,
-			successInPopup: false,
+			successInPopup: false
 		}, options)
 
 		if (options.captcha) {
@@ -117,7 +117,7 @@
 								setTimeout(() => {
 									$.magnificPopup.open({
 										items: {
-											src: `#success-${id}`, // может быть HTML строкой, jQuery объектом, или CSS селектором
+											src: `#success-${id}` // может быть HTML строкой, jQuery объектом, или CSS селектором
 										},
 										type: 'inline',
 										removalDelay: 160,
@@ -125,8 +125,8 @@
 										callbacks: {
 											close: () => {
 												hideSuccess.removeClass('is-inactive is-hidden')
-											},
-										},
+											}
+										}
 									})
 								}, 100)
 							}
@@ -168,7 +168,7 @@
 						if (options.debug) {
 							console.log(result)
 						}
-					},
+					}
 				})
 
 				return false
