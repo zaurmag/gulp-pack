@@ -4,16 +4,14 @@ module.exports = function (done) {
 	$.gulp.task('pug:build', () => {
 		return $.gulp.src(path.path.src.pug)
 			.pipe($.plugins.plumber())
-		// eslint-disable-next-line no-unused-vars
-			.pipe($.plugins.data((file) => { // Парсим JSON
+			.pipe($.plugins.data(() => { // Парсим JSON
 				return JSON.parse(fs.readFileSync('./src/base/data/data.json', 'utf8'));
 			}))
 			.pipe($.plugins.pug({
-				pretty: true,
+				pretty: !$.yargs.minifyHtml
 			}))
 			.pipe($.gulp.dest(path.path.build.root))
-			.on('end', $.browserSync.reload);
-		// eslint-disable-next-line no-unreachable
+			.on('end', $.browserSync.reload)
 		done();
 	});
 };
