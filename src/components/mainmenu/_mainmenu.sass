@@ -99,13 +99,15 @@
             margin-top: 15px
             opacity: 0
             transition: opacity, margin-top .2s ease
+            min-width: 150px
 
             #{$self}__item
                 a
                     display: block
-                    padding-top: 5px
-                    padding-bottom: 5px
+                    padding-top: 8px
+                    padding-bottom: 8px
 
+        // Parent
         &__item--parent
             background-color: $white
             position: relative
@@ -118,3 +120,21 @@
                         margin-top: 0
                         opacity: 1
 
+            > a
+                display: flex
+                align-items: center
+
+                &::after
+                    border-top: 2px solid $gray-600
+                    border-right: 2px solid $gray-600
+                    content: ""
+                    display: block
+                    margin-left: 8px
+                    transform: rotate(135deg)
+                    height: 7px
+                    width: 7px
+
+                &:hover
+                    &::after
+                        border-top-color: $primary
+                        border-right-color: $primary
