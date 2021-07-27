@@ -1,15 +1,16 @@
-let path = require('./path/path.js');
+const path = require('./path/path.js')
+
 module.exports = function () {
-	$.gulp.task('spriteSvg:build', (done) => {
+	$.gulp.task('spriteSvg:build', done => {
 		return $.gulp.src(path.path.src.svgIcons)
 			.pipe($.plugins.plumber())
 			.pipe($.plugins.cheerio({
 				run($) {
-					$('[fill]').removeAttr('fill');
-					$('[stroke]').removeAttr('stroke');
-					$('[style]').removeAttr('style');
+					$('[fill]').removeAttr('fill')
+					$('[stroke]').removeAttr('stroke')
+					$('[style]').removeAttr('style')
 				},
-				parserOptions: {xmlMode: true},
+				parserOptions: { xmlMode: true }
 			}))
 			.pipe($.plugins.replace('&gt;', '>'))
 			.pipe($.plugins.svgSprite({
@@ -18,19 +19,18 @@ module.exports = function () {
 						sprite: '../sprite.svg',
 						svg: {
 							xmlDeclaration: false,
-							doctypeDeclaration: false,
+							doctypeDeclaration: false
 						},
 						render: {
 							scss: {
 								dest: '../../../src/mixins/sass/_sprite-svg.scss',
-								template: 'src/templates/sass/_sprite_svg_template.scss',
-							},
-						},
-					},
-				},
+								template: 'src/templates/sass/_sprite_svg_template.scss'
+							}
+						}
+					}
+				}
 			}))
-			.pipe($.gulp.dest(path.path.build.img));
-		// eslint-disable-next-line no-unreachable
-		done();
-	});
-};
+			.pipe($.gulp.dest(path.path.build.img))
+		done()
+	})
+}
