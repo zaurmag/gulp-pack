@@ -1,4 +1,5 @@
-mixin icon(name)
+mixin icon(name, clc)
 	- mod = mod || ''
-	svg(class="icon icon-" + name)
+	- clc = clc || ''
+	svg(class="icon icon-" + name + ' ' + clc)
 		use(xlink:href="#" + name)
