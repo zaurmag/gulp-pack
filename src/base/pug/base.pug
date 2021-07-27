@@ -1,4 +1,4 @@
-include ../mixins/pug/svg-icon
+include ../../mixins/pug/svg-icon
 block variables
     -
         var baseDir = './';
@@ -6,14 +6,14 @@ block variables
 doctype html
 html(lang="ru")
     //- Include head
-    include ./pug/head
+    include ./head
 
     body(class=pageClass)
         .wrapper
 
             .wrapper__content
                 //- Include header
-                include ../components/header/header
+                include ../../components/header/header
 
                 if (pageClass !== 'homepage')
                     nav.breadcrumbs.mb-sm-30
@@ -34,13 +34,13 @@ html(lang="ru")
                 block bottom-position
 
             //- Include footer
-            include ../components/footer/footer
+            include ../../components/footer/footer
 
         //- Include callback
-        include ../components/form/form--callback
+        include ../../components/form/form--callback
 
         .d-none
-            include ../../dist/images/sprite.svg
+            include ../../../dist/images/sprite.svg
 
         a.go-top.go-top--js(href='#')
             +icon('arrow-up')
