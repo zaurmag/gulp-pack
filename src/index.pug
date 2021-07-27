@@ -1,4 +1,4 @@
-extends ./base/base
+extends base/pug/base
 
 append variables
     - var title = 'Главная страница сайта'
@@ -20,8 +20,7 @@ block columns
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid consectetur consequatur deserunt dolores est ex fugit non odit reprehenderit! Animi commodi itaque magnam maxime nam obcaecati quis quos repudiandae.
 
             p
-                img(src="./images/no-foto.webp" alt="")
-
+                img.img-fluid(src="./images/no-foto.webp" alt="")
 
         //-pagination
         .pagination.mt-30

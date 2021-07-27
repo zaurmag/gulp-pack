@@ -1,13 +1,14 @@
-let path = require('./path/path.js');
+const path = require('./path/path.js')
+const config = require('../package.json')
 
-module.exports = function (done) {
+module.exports = () => {
 	$.gulp.task('favicons:lg', () => {
 		return $.gulp.src(path.path.src.favicon_lg)
 			.pipe($.plugins.plumber())
 			.pipe($.plugins.favicons({
-				appName: 'My App',
-				appShortName: 'App',
-				appDescription: 'This is my application',
+				appName: config.name,
+				appShortName: config.name,
+				appDescription: config.description,
 				html: 'favicons.html',
 				pipeHTML: true,
 				url: 'http://localhost/',
@@ -25,12 +26,10 @@ module.exports = function (done) {
 					yandex: true,
 					windows: true,
 					coast: true,
-				},
+				}
 			}))
-			.pipe($.gulp.dest(path.path.build.imgFavicons));
-		// eslint-disable-next-line no-unreachable
-		done();
-	});
+			.pipe($.gulp.dest(path.path.build.imgFavicons))
+	})
 
 	$.gulp.task('favicons:sm', () => {
 		return $.gulp.src(path.path.src.favicon_sm)
@@ -49,11 +48,9 @@ module.exports = function (done) {
 					firefox: false,
 					yandex: false,
 					windows: false,
-					coast: false,
-				},
+					coast: false
+				}
 			}))
-			.pipe($.gulp.dest(path.path.build.imgFavicons));
-		// eslint-disable-next-line no-unreachable
-		done();
-	});
-};
+			.pipe($.gulp.dest(path.path.build.imgFavicons))
+	})
+}
