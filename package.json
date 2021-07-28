@@ -9,7 +9,7 @@
     "MinifyHtml": "gulp pug:build --minify-html true",
     "MinifyJs": "gulp js:build --minify-js true",
     "MinifyCss": "gulp style:build --minify-css true",
-    "Start Ftp": "gulp default --ftp true",
+    "Start Ftp": "gulp default_ftp --ftp true",
     "Ftp": "gulp ftp:build --ftp true",
     "lint:scripts": "./node_modules/.bin/eslint src/**/*.js",
     "lint:scripts --fix": "./node_modules/.bin/eslint src/**/*.js --fix",
