@@ -7,7 +7,7 @@ module.exports = {
 			imgFavicons: 'dist/images/favicons',
 			js: 'dist/js',
 			fonts: 'dist/fonts',
-			zip: 'zip',
+			zip: 'zip'
 		},
 		src: { // Source files
 			pug: 'src/*.pug',
@@ -20,15 +20,15 @@ module.exports = {
 			fonts: 'src/fonts/*',
 			favicon_lg: 'src/images/favicon-lg.png',
 			favicon_sm: 'src/images/favicon-sm.png',
-			resources: 'src/resources/**/*',
+			resources: 'src/resources/**/*'
 		},
 		watch: { // Watch files
 			json: 'src/base/data/*.json',
 			pug: 'src/**/*.pug',
-			style: 'src/**/*',
+			style: 'src/**/*.+(sass|scss|css)'
 		},
 		clean: {
-			all: './dist',
-		},
-	},
-};
+			all: './dist'
+		}
+	}
+}
