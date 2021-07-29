@@ -12,7 +12,7 @@
     "Start Ftp": "gulp default_ftp --ftp true",
     "Ftp": "gulp ftp:build --ftp true",
     "lint:scripts": "./node_modules/.bin/eslint src/**/*.js",
-    "lint:scripts --fix": "./node_modules/.bin/eslint src/**/*.js --fix",
+    "lintFix:scripts": "./node_modules/.bin/eslint src/**/*.js --fix",
     "zip": "gulp zip:build",
     "clean": "gulp clean"
   },
