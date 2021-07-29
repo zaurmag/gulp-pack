@@ -1,3 +1,11 @@
+import inputmask from 'inputmask'
+const phoneMask = document.querySelector('.phone-mask--js')
+
+inputmask({
+	mask: '+7 (999) 999-99-99'
+	// showMaskOnHover: false
+}).mask(phoneMask)
+
 jQuery(document).ready(($) => {
 	/**
 	 * Form init
@@ -8,7 +16,8 @@ jQuery(document).ready(($) => {
 		// mailUrl: '../newquiz/form-submit/submit.php'
 
 	}, () => {
-		console.log(' Событие перед отпрвкой формы ')
+		console.log('Событие перед отпрвкой формы')
 	}, () => {
-		console.log(' Событие после отправки формы ')
+		console.log('Событие после отправки формы')
 	})
+})
