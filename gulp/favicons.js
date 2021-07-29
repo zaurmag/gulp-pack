@@ -25,7 +25,7 @@ module.exports = () => {
 					firefox: true,
 					yandex: true,
 					windows: true,
-					coast: true,
+					coast: true
 				}
 			}))
 			.pipe($.gulp.dest(path.path.build.imgFavicons))

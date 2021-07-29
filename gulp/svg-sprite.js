@@ -1,7 +1,7 @@
 const path = require('./path/path.js')
 
 module.exports = function () {
-	$.gulp.task('spriteSvg:build', done => {
+	$.gulp.task('spriteSvg:build', () => {
 		return $.gulp.src(path.path.src.svgIcons)
 			.pipe($.plugins.plumber())
 			.pipe($.plugins.cheerio({
@@ -31,6 +31,5 @@ module.exports = function () {
 				}
 			}))
 			.pipe($.gulp.dest(path.path.build.img))
-		done()
 	})
 }

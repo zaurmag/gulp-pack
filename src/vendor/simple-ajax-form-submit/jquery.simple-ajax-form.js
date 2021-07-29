@@ -74,7 +74,7 @@
 				const successTemplate = () => {
 					return `
 						<h4 class="form__success-title">${options.successTitle}</h4>
-						<p class = "form__success-text" >${options.successText}</p>\t
+						<p class = "form__success-text" >${options.successText}</p>
 					`
 				}
 

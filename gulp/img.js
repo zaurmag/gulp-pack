@@ -1,4 +1,4 @@
-const path = require('./path/path.js');
+const path = require('./path/path.js')
 module.exports = function () {
 	$.gulp.task('img:build', () => {
 		return $.gulp.src([path.path.src.img, '!src/images/icons/**/*', path.path.src.imgComp])

@@ -2,7 +2,7 @@ let path = require('./path/path.js')
 const sass = require('gulp-sass')(require('sass'))
 
 module.exports = function () {
-	$.gulp.task('style:build', (done) => {
+	$.gulp.task('style:build', () => {
 		return $.gulp.src(path.path.src.style)
 			.pipe($.plugins.plumber())
 			.pipe($.plugins.if(!$.yargs.minifyCss, $.plugins.sourcemaps.init({ largeFile: true })))
@@ -18,6 +18,5 @@ module.exports = function () {
 			.pipe($.browserSync.reload({
 				stream: true
 			}))
-		done()
 	})
 }

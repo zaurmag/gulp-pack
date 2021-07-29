@@ -300,7 +300,7 @@
 			"never"
 		],
 		"func-name-matching": "off",
-		"func-names": "warn",
+		"func-names": "off",
 		"func-style": "off",
 		"id-blacklist": "off",
 		"id-length": "off",
