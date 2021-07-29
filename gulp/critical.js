@@ -1,6 +1,6 @@
-let path = require('./path/path.js');
+let path = require('./path/path.js')
 
-module.exports = function (done) {
+module.exports = function () {
 	$.gulp.task('critical:build', () => {
 		return $.gulp.src(`${path.path.build.html}*.html`)
 			.pipe($.plugins.plumber())
@@ -11,14 +11,13 @@ module.exports = function (done) {
 				css: [`${path.path.build.style}/main.min.css`],
 				dimensions: [{
 					height: 667,
-					width: 375,
+					width: 375
 				}, {
 					height: 656,
-					width: 1366,
+					width: 1366
 				}],
-				extract: true,
+				extract: true
 			}))
-			.pipe($.gulp.dest(path.path.build.root));
-		done();
-	});
-};
+			.pipe($.gulp.dest(path.path.build.root))
+	})
+}

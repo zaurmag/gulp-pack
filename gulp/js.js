@@ -4,7 +4,7 @@ module.exports = function () {
 			.pipe($.plugins.plumber())
 			.pipe($.webpackStream($.webpackConfig))
 			.pipe($.gulp.dest($.webpackConfig.output.path))
-			.pipe($.browserSync.reload({stream: true}));
-		done();
-	});
-};
+			.pipe($.browserSync.reload({ stream: true }))
+		done()
+	})
+}
