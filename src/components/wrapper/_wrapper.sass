@@ -9,5 +9,9 @@
     position: relative
     height: 100vh
 
+    // Fix for IE11
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+        display: block
+
     &__content
         flex: 1

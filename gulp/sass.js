@@ -6,7 +6,7 @@ module.exports = function () {
 		return $.gulp.src(path.path.src.style)
 			.pipe($.plugins.plumber())
 			.pipe($.plugins.if(!$.yargs.minifyCss, $.plugins.sourcemaps.init({ largeFile: true })))
-			.pipe(sass())
+			.pipe(sass().on('error', sass.logError))
 			.pipe($.plugins.pxtorem())
 			.pipe($.plugins.if($.yargs.minifyCss, $.plugins.csso()))
 			.pipe($.plugins.if($.yargs.minifyCss, $.plugins.autoprefixer({

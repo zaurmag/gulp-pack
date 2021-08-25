@@ -44,14 +44,14 @@ if ($.yargs.minifyJs) {
 }
 
 $.gulp.task('build', $.gulp.series(
-	'spriteSvg:build',
+	'pug:build',
+	'resources:build',
 	$.gulp.parallel(
-		'pug:build',
 		'style:build',
 		'js:build',
 		'img:build',
 		'spriteImg:build',
-		'resources:build',
+		'spriteSvg:build',
 		'favicons:lg',
 		'favicons:sm'
 	))

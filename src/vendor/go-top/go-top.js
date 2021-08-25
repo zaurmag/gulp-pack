@@ -30,19 +30,21 @@ function scrollTo(to, duration = 700) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	const btn = document.querySelector('.go-top--js')
-	window.addEventListener('scroll', () => {
-		if (pageYOffset > 100) {
-			btn.classList.add('is-show')
-		} else {
-			btn.classList.remove('is-show')
-		}
-	})
+	const $btn = document.querySelector('.go-top--js')
+	if ($btn) {
+		window.addEventListener('scroll', () => {
+			if (pageYOffset > 100) {
+				$btn.classList.add('is-show')
+			} else {
+				$btn.classList.remove('is-show')
+			}
+		})
 
-	// Click on btn
-	btn.addEventListener('click', event => {
-		event.preventDefault()
-		scrollTo(0, 200)
-	})
+		// Click on $btn
+		$btn.addEventListener('click', event => {
+			event.preventDefault()
+			scrollTo(0, 200)
+		})
+	}
 })
 
