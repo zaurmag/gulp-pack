@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = {
 	entry: './src/base/js/index.js',
@@ -15,12 +15,12 @@ module.exports = {
 				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader'
-				},
-			},
-		],
+				}
+			}
+		]
 	},
 	externals: {
-		jquery: 'jQuery',
+		jquery: 'jQuery'
 	},
-	devtool: 'source-map',
-};
+	devtool: 'source-map'
+}
