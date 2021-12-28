@@ -2,4 +2,4 @@ mixin icon(name, clc)
 	- mod = mod || ''
 	- clc = clc || ''
 	svg(class="icon icon-" + name + ' ' + clc)
-		use(xlink:href="#" + name)
+		use(xlink:href=`${baseDir}images/sprite.svg#${name}`)
