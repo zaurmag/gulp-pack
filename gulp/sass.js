@@ -1,5 +1,5 @@
 let path = require('./path/path.js')
-const sass = require('gulp-sass')(require('sass'))
+const sass = require('gulp-sass')(require('node-sass'))
 
 module.exports = function () {
 	$.gulp.task('style:build', () => {
