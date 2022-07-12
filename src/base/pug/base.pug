@@ -9,8 +9,8 @@ html(lang="ru")
     include ./head
 
     body(class=pageClass)
-        .wrapper
-            .wrapper__content
+        .page
+            .page__content
                 //- Include header
                 include ../../components/header/header
 
@@ -35,7 +35,7 @@ html(lang="ru")
             //- Include footer
             include ../../components/footer/footer
 
-        //- Include callback
+        //- Include callback modal
         include ../../components/form/form--callback
 
         a.go-top.go-top--js(href='#')
