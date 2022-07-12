@@ -1,14 +1,19 @@
-#callback.mfp-hide.mfp-white-block
-    .form
-        form#callbackForm(action='#' novalidate)
-            fieldset.form__fields.form__hide-success
-                .form-group
-                    input#name.form-control.form-control-lg(name='name', type='text', placeholder='Ваше имя*', required)
+#callback.modal.fade(tabindex="-1")
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header
+                h5.modal-title Заказать обратный звонок
+                button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
 
-                .form-group
-                    input#phone.form-control.form-control-lg.phone-mask--js(name='phone', type='tel', placeholder='Ваш телефон*', required)
+            .form.modal-body
+                form#callbackForm(action='#' novalidate)
+                    fieldset.form__fields.form__hide-success
+                        .mb-3
+                            input.form-control(name='name', type='text', placeholder='Ваше имя*', required)
 
-                .form-group
-                    button.btn-submit--js.btn-s50.btn.btn-success.btn-block(type='submit') Отправить
+                        .mb-3
+                            input.form-control.js-phone-mask(name='phone', type='tel', placeholder='Ваш телефон*', required)
 
-            input(type='hidden', name='go', value='callback')
+                        button.btn-submit--js.btn-s50.btn.btn-success.w-100(type='submit') Отправить
+
+                    input(type='hidden', name='go', value='callback')

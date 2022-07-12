@@ -10,7 +10,6 @@ html(lang="ru")
 
     body(class=pageClass)
         .wrapper
-
             .wrapper__content
                 //- Include header
                 include ../../components/header/header
@@ -42,7 +41,6 @@ html(lang="ru")
         a.go-top.go-top--js(href='#')
             +icon('arrow-up')
 
-        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
         script(src=`${baseDir}js/main.js`)
 
         block script
