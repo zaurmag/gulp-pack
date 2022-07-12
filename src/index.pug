@@ -24,6 +24,9 @@ block columns
             p
                 img.img-fluid(src="./images/no-foto.webp" alt="")
 
+            p
+                button.btn.btn-primary(type="button" data-bs-toggle="modal" data-bs-target="#callback") Открыть модалку с формой
+
         //-pagination
         .pagination.mt-30
             include ./components/pagination/pagination
@@ -31,12 +34,8 @@ block columns
     //- Include sidebar
     include ./components/sidebar/sidebar--left
 
-
 block bottom-position
     section.bottom-position.mt-5
         .module
             .container
                 .module__title Модуль в позиции BOTTOM
-
-
-
