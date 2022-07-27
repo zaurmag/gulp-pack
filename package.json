@@ -44,6 +44,7 @@
     "browser-sync": "latest",
     "critical": "latest",
     "del": "latest",
+    "emitty": "^1.4.0",
     "eslint": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",

@@ -18,7 +18,7 @@ global.$ = {
 	webpackStream: require('webpack-stream'),
 	plugins: require('gulp-load-plugins')({
 		overridePattern: true,
-		pattern: ['gulp-*', 'gulp.*', '@*/gulp{-,.}*'],
+		pattern: ['gulp-*', 'gulp.*', '@*/gulp{-,.}*', 'emitty'],
 		scope: [
 			'dependencies',
 			'devDependencies',
