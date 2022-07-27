@@ -5,6 +5,9 @@ module.exports = function () {
 		// Without critical
 		$.gulp.watch(path.path.watch.json, { usePolling: true }, $.gulp.series('pug:build'))
 		$.gulp.watch(path.path.watch.pug, { usePolling: true }, $.gulp.series('pug:build'))
+			.on('all', (event, file) => {
+				global.emittyPugChangedFile = event === 'unlink' ? undefined : file
+			})
 
 		// If ftp
 		if ($.yargs.ftp) {
