@@ -79,9 +79,6 @@
     "bootstrap": "latest",
     "enquire.js": "latest",
     "inputmask": "latest",
-    "jquery-form-styler": "latest",
-    "magnific-popup": "latest",
-    "owl.carousel": "latest",
     "svg4everybody": "latest"
   }
 }
