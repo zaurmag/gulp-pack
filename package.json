@@ -43,7 +43,7 @@
     "bem-tools-create": "bem-tools/bem-tools-create",
     "browser-sync": "latest",
     "critical": "latest",
-    "del": "latest",
+    "del": "6.1.1",
     "emitty": "^1.4.0",
     "eslint": "latest",
     "gulp": "latest",
@@ -76,12 +76,9 @@
     "yargs": "latest"
   },
   "dependencies": {
-    "bootstrap": "latest",
+    "bootstrap": "5.2.0",
     "enquire.js": "latest",
     "inputmask": "latest",
-    "jquery-form-styler": "latest",
-    "magnific-popup": "latest",
-    "owl.carousel": "latest",
     "svg4everybody": "latest"
   }
 }
