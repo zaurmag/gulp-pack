@@ -76,7 +76,7 @@
     "yargs": "latest"
   },
   "dependencies": {
-    "bootstrap": "latest",
+    "bootstrap": "5.2.0",
     "enquire.js": "latest",
     "inputmask": "latest",
     "svg4everybody": "latest"
