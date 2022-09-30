@@ -1,5 +1,8 @@
 let path = require('./path/path.js')
 const sass = require('gulp-sass')(require('node-sass'))
+const pxToRemOptions = { // https://github.com/cuth/postcss-pxtorem
+	propList: ['*']
+}
 
 module.exports = function () {
 	$.gulp.task('style:build', () => {
@@ -7,7 +10,7 @@ module.exports = function () {
 			.pipe($.plugins.plumber())
 			.pipe($.plugins.if(!$.yargs.minifyCss, $.plugins.sourcemaps.init({ largeFile: true })))
 			.pipe(sass().on('error', sass.logError))
-			.pipe($.plugins.pxtorem())
+			.pipe($.plugins.pxtorem(pxToRemOptions))
 			.pipe($.plugins.if($.yargs.minifyCss, $.plugins.csso()))
 			.pipe($.plugins.if($.yargs.minifyCss, $.plugins.autoprefixer({
 				overrideBrowserslist: ['last 2 versions'],
