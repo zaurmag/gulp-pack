@@ -1,0 +1,68 @@
+/**
+ * Utilities
+ * -----------------------------------------------------
+ */
+
+$utilities: map-merge(
+	$utilities,
+		(
+        	// Font weight
+			"font-weight": map-merge(
+					map-get($utilities, "font-weight"),
+					(
+						values: map-merge(
+								map-get(map-get($utilities, "font-weight"), "values"),
+								(medium: 600),
+						),
+					),
+			),
+				// Opacity
+			"opacity": (
+				property: opacity,
+				responsive: true,
+				values: (
+					0: 0,
+					25: .25,
+					50: .5,
+					75: .75,
+					100: 1,
+				)
+			),
+				// Font-size
+			"font-size": (
+				property: "font-size",
+				responsive: true,
+				class: fz,
+				values: (
+					10: 10px,
+					12: 12px,
+					14: 14px,
+					16: 16px,
+					18: 18px,
+				)
+			),
+				// Max-width
+			"max-width": (
+				property: max-width,
+				responsive: true,
+				class: mw,
+				values: (
+					25: 25%,
+					50: 50%,
+					75: 75%,
+					100: 100%,
+				)
+			),
+			"shadow": (
+				property: box-shadow,
+				class: shadow,
+				values: (
+					null: $box-shadow,
+					sm: $box-shadow-sm,
+					sm-soft: $box-shadow-sm-soft,
+					lg: $box-shadow-lg,
+					none: none,
+				)
+			)
+		)
+);

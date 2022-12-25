@@ -1,0 +1,139 @@
+/**
+ * Font
+ * ---------------------------------------------
+ */
+$font-family-base: "Roboto", sans-serif;
+$enable-smooth-scroll: false;
+
+/**
+ * Colors
+ * ---------------------------------------------
+ */
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+$dark:     $gray-900;
+
+$blue: #377dff;
+$green: #00c9a7;
+$red: #ed4c78;
+
+// $custom-theme-colors: (
+//	"dark": $dark
+// );
+
+/**
+ * Spacing
+ * ---------------------------------------------
+ */
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3),
+    10: ($spacer * 0.625), // 10px
+    15: ($spacer * 0.9375), // 15px
+    20: ($spacer * 1.25), // 20px
+    25: ($spacer * 1.5625), // 25px
+    30: ($spacer * 1.875), // 30px
+    40: ($spacer * 2.5), // 40px
+    50: ($spacer * 3.125), // 50px
+    60: ($spacer * 3.75), // 60px
+    70: ($spacer * 4.375), // 70px
+    80: ($spacer * 5), // 80px
+    90: ($spacer * 5.625), // 90px
+    100: ($spacer * 6.25) // 100px
+);
+
+/**
+ * Buttons
+ * --------------------------------------
+ */
+$btn-border-radius: 5px;
+$btn-border-radius-lg: 6px;
+$btn-border-radius-sm: 4px;
+
+$btn-font-size: 14px;
+$btn-font-size-sm: 12px;
+$btn-font-size-lg: 16px;
+
+$btn-padding-y-lg: 11.5px;
+
+/**
+ * Shadow
+ * ---------------------------------------------
+ */
+$box-shadow-sm-soft: 0 4px 10px rgba($dark, .075);
+
+/**
+ * Cards
+ * ---------------------------------------------
+ */
+$card-cap-bg: rgba($gray-100, 0.3);
+$card-cap-padding-y: 15px;
+$card-cap-padding-x: 20px;
+$card-border-color: rgba($gray-200, 0.95);
+$card-spacer-x: 20px;
+$card-spacer-y: 15px;
+
+/**
+ * Body
+ * ---------------------------------------------
+ */
+$font-size-base: 0.875rem;
+$body-color: $dark;
+
+/**
+ * Breadcrumb
+ * ---------------------------------------------
+ */
+$breadcrumb-margin-bottom: 30px;
+
+/**
+ * Forms
+ * ---------------------------------------------
+ */
+$input-font-size: 14px;
+$input-font-size-lg: 14px;
+$input-border-radius-lg: 5px;
+$input-padding-y-lg: 12px;
+$input-border-color: $gray-300;
+
+$form-label-font-weight: 500;
+$form-check-input-border-radius: 0.175em;
+
+/**
+ * Tables
+ * ---------------------------------------------
+ */
+$table-cell-padding-x: 15px;
+$table-cell-padding-y: 10px;
+
+/**
+ * Tooltips
+ * ---------------------------------------------
+ */
+$tooltip-font-size: 12px;
+
+/**
+ * Modal
+ * ---------------------------------------------
+ */
+$modal-md: 450px;
+
+/**
+ * Progress
+ * ---------------------------------------------
+ */
+$progress-bar-animation-timing: 0.7s linear infinite;
