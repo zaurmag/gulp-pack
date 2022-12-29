@@ -79,6 +79,7 @@
     "bootstrap": "5.2.0",
     "enquire.js": "latest",
     "inputmask": "latest",
+    "lozad": "^1.16.0",
     "svg4everybody": "latest"
   }
 }

@@ -1,0 +1,17 @@
+mixin lazyImage(data)
+    img.image-lazy.js-lazy(
+        draggable="false"
+        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+        data-src=data.src
+        data-srcset=data.srcset
+        data-placeholder-background=data.placeholder
+        alt=data.alt
+    )&attributes(attributes)
+
+mixin lazyImageWebP(data)
+    picture.lozad.image-lazy.js-lazy(
+        data-placeholder-background=data.placeholder
+    )
+        source.js-webp(srcset= data.src + ".webp" type="image/webp")
+        source.js-jpg(srcset= data.src + ".jpg" type="image/jpg")
+        img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt= data.alt)

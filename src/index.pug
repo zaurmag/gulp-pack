@@ -1,41 +1,45 @@
 extends base/pug/base
 
 append variables
-    - var title = 'Главная страница сайта'
-    - var pageClass = 'homepage'
-    - var menuHref = '/'
+	- var title = 'Главная страница сайта'
+	- var pageClass = 'homepage'
+	- var menuHref = '/'
 
 block top-position
-    section.top-position.mb-5
-        .module
-            .container
-                .module__title Модуль в позиции TOP
+	section.top-position.mb-5
+		.module
+			.container
+				.module__title Модуль в позиции TOP
 
 block columns
-    main.content--right.col-lg-9
-        article.page.textblock
-            h1.mb-5 !{title}
+	main.content--right.col-lg-9
+		article.page.textblock
+			h1.mb-5 !{title}
 
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, praesentium.
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid consectetur consequatur deserunt dolores est ex fugit non odit reprehenderit! Animi commodi itaque magnam maxime nam obcaecati quis quos repudiandae.
-            p
-                // Подключение svg иконок
-                +icon("arrow-up")
-            p
-                img.img-fluid(src="./images/no-foto.webp" alt="")
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, praesentium.
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid consectetur consequatur deserunt dolores est ex fugit non odit reprehenderit! Animi commodi itaque magnam maxime nam obcaecati quis quos repudiandae.
+			p
+				// Подключение svg иконок
+				+icon("arrow-up")
 
-            p
-                button.btn.btn-primary(type="button" data-bs-toggle="modal" data-bs-target="#callback") Открыть модалку с формой
+			//- img.img-fluid(src="./images/no-foto.webp" alt="")
+			+lazyImageWebP({
+				src: './images/no-foto',
+				alt: 'Image'
+			})
 
-        //-pagination
-        .pagination.mt-30
-            include ./components/pagination/pagination
+			p
+				button.btn.btn-primary(type="button" data-bs-toggle="modal" data-bs-target="#callback") Открыть модалку с формой
 
-    //- Include sidebar
-    include ./components/sidebar/sidebar--left
+		//-pagination
+		.pagination.mt-30
+			include ./components/pagination/pagination
+
+	//- Include sidebar
+	include ./components/sidebar/sidebar--left
 
 block bottom-position
-    section.bottom-position.mt-5
-        .module
-            .container
-                .module__title Модуль в позиции BOTTOM
+	section.bottom-position.mt-5
+		.module
+			.container
+				.module__title Модуль в позиции BOTTOM
