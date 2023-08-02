@@ -53,7 +53,7 @@
     "gulp-csso": "latest",
     "gulp-data": "latest",
     "gulp-eslint": "latest",
-    "gulp-favicons": "latest",
+    "gulp-favicons": "3.0.0",
     "gulp-if": "latest",
     "gulp-load-plugins": "latest",
     "gulp-plumber": "latest",
